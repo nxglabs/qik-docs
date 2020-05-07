@@ -44,41 +44,8 @@ Query Params :
 **example :**
 
 
-[![imagePrediction](%image_url%/comodo/imagePrediction.png "imagePrediction")](%image_url%/comodo/imagePrediction.png "imagePrediction")
+[![imagePrediction](%image_url%/comodo/image_prediction.png "imagePrediction")](%image_url%/comodo/image_prediction.png "imagePrediction")
 
 ------------
 ------------
 
-# model for zip file
-
-this api is to train a model on saved zip file.
-
-build types - scratch.
-
-------------
-
-**Url: http://3.6.33.247/keras/image_classification**
-
-**method : post**
-
-------------
-
-**input:**
-
-Query Params :
-
-    {"key":"zip_name","value":"xxxx"},
-    {"key":"build_type","value":"xxxx"}
-
-------------
-
-**output parameters :**
-
-    {
-        "zip name": "xxxx",
-        "build type": "xxx",
-        "no_of_classes": xxx,
-        "model saved at": "xxx",
-        "scratch_model": "xxxxxxxxx"
-    }
-------------

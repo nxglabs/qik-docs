@@ -26,7 +26,7 @@ this api helps to upload the csv file into the application.
 
 **example :**
 
-[![csvUpload](%image_url%/comodo/csvupload.png "csvUpload")](%images_url%/comodo/csvupload.png "csvUpload")
+[![csvUpload](%image_url%/comodo/csv_upload.png "csvUpload")](%images_url%/comodo/csv_upload.png "csvUpload")
 
 ------------
 
@@ -53,12 +53,12 @@ this api helps to save the data from parseServer into the csv file.
 
     {
         "status": "success",
-        "message": "file saved as xxxxx.csv"
+        "message": "object data saved as xxxxx.csv"
     }
 
 **example :**
 
-[![parseData2](%image_url%/comodo/parseData2.png "parseData2")](!%5Bscreen-shots%5D/comodo/parseData2.png "parseData2")
+[![parseData2](%image_url%/comodo/dataFromParse.png "parseData2")](!%5Bscreen-shots%5D/comodo/dataFromParse.png "parseData2")
 
 ------------
 ------------

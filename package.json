@@ -1,43 +1,9 @@
 {
-  "name": "raneto",
-  "version": "0.16.4",
-  "description": "Markdown powered Knowledgebase",
-  "author": "Gilbert Pellegrom <gilbert@pellegrom.me>",
-  "license": "MIT",
-  "keywords": [
-    "raneto",
-    "knowledgebase",
-    "markdown",
-    "static",
-    "site",
-    "generator"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gilbitron/Raneto.git"
-  },
-  "bugs": "https://github.com/gilbitron/Raneto/issues",
-  "contributors": [
-    "https://github.com/gilbitron/Raneto/graphs/contributors"
-  ],
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://raw.githubusercontent.com/gilbitron/Raneto/master/LICENSE"
-    }
-  ],
+  "name": "qik-docs",
   "bin": "./bin/raneto",
   "main": "./app/index.js",
   "scripts": {
-    "start": "DEBUG=raneto node example/server.js",
-    "start_win": "set DEBUG=raneto&&node example/server.js",
-    "test": "npm run lint && mocha --reporter spec test/*.js",
-    "gulp": "gulp",
-    "lint": "./node_modules/.bin/eslint bin/* app/**/*.js example/**/*.js test/*.js gulpfile.js",
-    "postinstall": "gulp default"
-  },
-  "engines": {
-    "node": ">=8.0.0"
+    "start": "node example/server.js"
   },
   "dependencies": {
     "body-parser": "1.19.0",

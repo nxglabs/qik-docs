@@ -1,7 +1,5 @@
 /*
-
-Title: qik-node-actions
-
+Title: producers
 */
 
 
@@ -9,7 +7,7 @@ Postman Collection - https://www.getpostman.com/collections/ebbc1cb54d3bab54a22b
 
 ------------
 
-## SMS Producer
+# SMS Producer
 
 This API send sms using onlinebulksms provider .
 
@@ -48,7 +46,7 @@ SmsProviderLink - www.onlinebulksmslogin.com
 
 default :
 
-[![smsProducer_default](%5Bscreen-shots%5D/sms/sms_def.png "smsProducer_default")](%5Bscreen-shots%5D/sms/sms_def.png "smsProducer_default")
+![%image_url%/qik-node-actions/sms_def.png](%image_url%/qik-node-actions/sms_def.png])
 
 dynamic:
 
@@ -61,11 +59,11 @@ Result:
 ------------
 ------------
 
-## Email Producers
+# Email Producers
 
 ------------
 
-### 1) GMAIL producer
+## GMAIL producer
 
 This Api Send mail from gmail account.
 
@@ -117,7 +115,7 @@ Result:
 
 ------------
 
-### 2) SMTP producer:
+## SMTP producer:
 
 This Api Send mail from any smtp account.
 
@@ -169,7 +167,7 @@ Result:
 
 ------------
 
-### 3) MAILGUN
+## MAILGUN
 
 This API send simple text mail to only validate receivers.
 
@@ -217,7 +215,7 @@ Result:
 
 ------------
 
-### 4) SESMAIL Producer
+## SESMAIL Producer
 
 This API send simple text mail to only validate receivers.
 
@@ -271,11 +269,11 @@ Result:
 ------------
 ------------
 
-## Notify Producers
+# Notify Producers
 
 ------------
 
-### 1) NotifyDevice Producer
+## NotifyDevice Producer
 
 This API send notification to android device .
 
@@ -321,7 +319,7 @@ Result:
 
 ------------
 
-### 2) NotifyTopic Producer
+## NotifyTopic Producer
 
 This API send notification to android devices which are subscribed to the topic .
 
@@ -369,11 +367,11 @@ Result:
 ------------
 
 
-## Slack Producers
+# Slack Producers
 
 ------------
 
-### 1) slackToChannel Producer
+## slackToChannel Producer
 
 This API send slack to channel .
 
@@ -418,7 +416,7 @@ Result:
 
 ------------
 
-### 2) slackToUser Producer
+## slackToUser Producer
 
 This API send slack to user .
 

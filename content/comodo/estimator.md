@@ -1,16 +1,9 @@
-
 /*
-
 Title: estimator
-
 */
 
-# Estimator Application documention
 
-------------
-------------
-
-## 1) Train - 
+# Train
 
 this api is to train the model.
 
@@ -56,7 +49,7 @@ Query Params :
 ------------
 
 
-## 2) Retrain - 
+# Retrain
 
 this api is to retrain the dataset over the model.
 
@@ -103,7 +96,7 @@ retrain example :
 
 ------------
 
-## 3) Predict - 
+# Predict 
 
 this api is to make a single prediction.
 
@@ -159,7 +152,7 @@ for Regression Result :
 
 ------------
 
-## 4) deleteModel - 
+# deleteModel 
 
 this api delete the model.
 

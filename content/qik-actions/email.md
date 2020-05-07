@@ -1,15 +1,8 @@
 /*
-
-Title: email applcation docs
-
+Title: email
 */
 
-# Email Application documention
-
-------------
-------------
-
-## 1) GMAIL
+# GMAIL
 
 This Api Send mail from gmail account with attachment files url. 
 attachment files can be video, audio, documents, images etc.
@@ -70,7 +63,9 @@ send_gmail_dynamic :
 
 send_gmail_default :
 
-[![send_gmail_default](!%5Bscreen-shots%5D/email_app/send_gmail_default.png "send_gmail_default")](!%5Bscreen-shots%5D/email_app/send_gmail_default.png "send_gmail_default")
+[![send_gmail_dynamic](../%image_url%/qik-action/email_app/send_gmail_default.png "send_gmail_dynamic")](../%image_url%/qik-action/email_app/send_gmail_default.png "send_gmail_dynamic")
+
+ 
 
 ------------
 
@@ -82,7 +77,7 @@ send_gmail_dynamic :
 ------------
 ------------
 
-## 2) SMTP:
+# SMTP
 
 This Api Send mail from any smtp account with attachment files url.
 attachment files can be video, audio, documents, images etc.
@@ -158,7 +153,7 @@ send_mail_dynamic:
 ------------
 ------------
 
-## 3) MAILGUN
+# MAILGUN
 
 This API send simple text mail to only validate receivers.
 
@@ -222,7 +217,7 @@ mailgun_dynamic:
 ------------
 ------------
 
-## 3) SESMAIL
+# SESMAIL
 
 This API send simple text mail to only validate receivers.
 

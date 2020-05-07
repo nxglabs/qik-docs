@@ -1,15 +1,8 @@
 /*
-
 Title: analysis
-
 */
 
-# Analysis Application documention
-
-------------
-------------
-
-## 1) Sentiment Analysis - 
+# Sentiment Analysis
 
 this api helps to differentiate between positive and negative reviews.
 
@@ -35,7 +28,7 @@ this api helps to differentiate between positive and negative reviews.
 
 ------------
 
-## 2) Caption Generate - 
+# Caption Generate  
 
 this api helps to generate caption for a image.
 
@@ -63,7 +56,7 @@ this api helps to generate caption for a image.
 
 ------------
 
-## 3) Emotion Detect - 
+# Emotion Detect
 
 this api helps detect emotion from uploaded face images.
 

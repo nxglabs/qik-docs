@@ -1,16 +1,8 @@
 /*
-
-Title: estimator
-
+Title: keras
 */
 
-
-# Keras Application documention
-
-------------
-------------
-
-## 1) Image Prediction -
+# Image Prediction
 
 this api is to predict image classes on pretrained models.
 
@@ -57,7 +49,7 @@ Query Params :
 ------------
 ------------
 
-## 4) model for zip file -
+# model for zip file
 
 this api is to train a model on saved zip file.
 
@@ -89,10 +81,4 @@ Query Params :
         "model saved at": "xxx",
         "scratch_model": "xxxxxxxxx"
     }
-------------
-
-**example :**
-
-
-
 ------------

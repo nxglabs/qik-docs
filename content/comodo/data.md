@@ -1,16 +1,8 @@
-
 /*
-
 Title: data
-
 */
 
-# Data Application documention
-
-------------
-------------
-
-## 1) csv file upload - 
+# csv file upload
 
 this api helps to upload the csv file into the application.
 
@@ -38,7 +30,7 @@ this api helps to upload the csv file into the application.
 
 ------------
 
-## 2) getDataFromParse - 
+# getDataFromParse 
 
 this api helps to save the data from parseServer into the csv file.
 

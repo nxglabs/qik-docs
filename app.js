@@ -1,6 +1,4 @@
 'use strict';
-// var express = require('express');
-// var app = express();
 
 var debug = require('debug')('raneto');
 var raneto = require('raneto');

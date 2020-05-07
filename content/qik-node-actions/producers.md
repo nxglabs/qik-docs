@@ -46,11 +46,11 @@ SmsProviderLink - www.onlinebulksmslogin.com
 
 default :
 
-![%image_url%/qik-node-actions/sms_def.png](%image_url%/qik-node-actions/sms_def.png])
+[![smsProducer_dynamic](sms/sms_def.png "smsProducer_dynamic")](sms/sms_def.png "smsProducer_dynamic")
 
 dynamic:
 
-[![smsProducer_dynamic](%5Bscreen-shots%5D/sms/sms_dyn.png "smsProducer_dynamic")](!%5Bscreen-shots%5D/sms/sms_dyn.png "smsProducer_dynamic")
+[![smsProducer_dynamic](sms/sms_def.png "smsProducer_dynamic")](sms/sms_def.png "smsProducer_dynamic")
 
 Result:
 

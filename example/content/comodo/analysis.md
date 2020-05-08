@@ -2,7 +2,7 @@
 Title: analysis
 */
 
-# Sentiment Analysis
+# Sentiment Analysis 
 
 this api helps to differentiate between positive and negative reviews.
 
@@ -11,10 +11,9 @@ this api helps to differentiate between positive and negative reviews.
 
 **method : get**
 
-**body:**
+**params:**
 
-    Content-Disposition: form-data; name="review" value="xxxx"
-
+    {   "review" : "xxxx" }
 
 **result :**
 
@@ -24,23 +23,26 @@ this api helps to differentiate between positive and negative reviews.
 
 **example :**
 
-[![sentiment](%image_url%/comodo/sentiment.png "sentiment")](%images_url%/comodo/sentiment.png "sentiment")
+[![sentiment](%image_url%/comodo/sentiment.png "sentiment")](%image_url%/comodo/sentiment.png "sentiment")
 
 ------------
+------------
 
-# Caption Generate  
+# captionGenerationByImage
 
-this api helps to generate caption for a image.
+this api helps to generate caption by uploading a image.
 
-**Url: http://ai.qik.ai/analysis/caption**
+**Url: http://ai.qik.ai/analysis/captionGenerationByImage**
 
 **method : post**
 
+**headers:**
+
+    {   "Content-Type" : "multipart/form-data" }
+
 **body:**
 
-    Content-Disposition: form-data; name="xxxx"; filename="xxx"
-    Content-Type: image/jpeg
-
+    {   "image" : upload a image file }
 
 **result:**
 
@@ -52,33 +54,68 @@ this api helps to generate caption for a image.
 
 **example :**
 
-[![caption](%image_url%/comodo/caption.png "caption")](%images_url%/comodo/caption.png "caption")
+[![captionGenerationByImage](%image_url%/comodo/captionGenerationByImage.png "captionGenerationByImage")](%image_url%/comodo/captionGenerationByImage.png "captionGenerationByImage")
 
 ------------
+------------
 
-# Emotion Detect
+# captionGenerationByUrl
 
-this api helps detect emotion from uploaded face images.
+this api helps to generate caption by providing a image url.
 
-**url: http://ai.qik.ai/analysis/emotion**
+**Url: http://ai.qik.ai/analysis/captionGenerationByUrl**
 
 **method : post**
 
+**headers:**
+
+    {   "Content-Type" : "application/json" }
+
 **body:**
 
-    Content-Disposition: form-data; name="xxxx"; filename="xxx"
-    Content-Type: image/jpeg
+    {   "imageUrl" : "xxxxx" }
 
+**result:**
+
+    {
+        "caption": "xxxxx"
+    }
+
+
+**example :**
+
+[![captionGenerationByUrl](%image_url%/comodo/captionGenerationByUrl.png "captionGenerationByUrl")](%image_url%/comodo/captionGenerationByUrl.png "captionGenerationByUrl")
+
+------------
+------------
+
+
+# emotionDetectionByImage
+
+this api helps detect emotion from uploaded face images.
+
+**url: http://ai.qik.ai/analysis/emotionDetectionByImage**
+
+**method : post**
+
+**headers:**
+
+    {   "Content-Type" : "multipart/form-data" }
+
+**body:**
+
+    {   "image" : upload a image file }
 
 **result :**
 
     {
-        "Image Name": "man.jpg",
-        "Emotion": "Surprise"
+        "Image Name": "xxxx",
+        "Emotion": "xxxx"
     }
 
 **example :**
 
-[![emotion](%image_url%/comodo/emotion.png "emotion")](%images_url%/comodo/emotion.png "emotion")
+[![emotionDetectionByImage](%image_url%/comodo/emotionDetectionByImage.png "emotionDetectionByImage")](%image_url%/comodo/emotionDetectionByImage.png "emotionDetectionByImage")
 
+------------
 ------------

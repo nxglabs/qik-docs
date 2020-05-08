@@ -3,28 +3,22 @@ Title: estimator
 */
 
 
-# Train
+# Train 
 
 this api is to train the model.
 
-------------
-
-**Url: http://3.6.33.247/estimators/train**
+**Url: http://ai.qik.ai/estimators/train**
 
 **method : get**
 
-------------
 
-**input:**
-Query Params :
+**Query Params:**
 
-    {"key":"dataset","value":"xxxxxxx"},
-    {"key":"algorithm","value":"xxxxxxxxx"},
-    {"key":"feature_columns","value":"xxxxxxx"},
-    {"key":"label","value":"xxxxxxxx"},
-    {"key":"train_steps","value":"xxxx"}
-
-------------
+    {   "dataset" : "xxxxxxx" },
+    {   "algorithm" : "xxxxxxxxx" },
+    {   "feature_columns" : "xxxxxxx" },
+    {   "label" : "xxxxxxxx" },
+    {   "train_steps" : xxxx }
 
 **output parameters :**
 
@@ -38,7 +32,6 @@ Query Params :
         "global_step": "xxx"
     }
 
-------------
 
 **example :**
 
@@ -49,30 +42,23 @@ Query Params :
 ------------
 
 
-# Retrain
+# Retrain 
 
 this api is to retrain the dataset over the model.
 
-------------
 
-**Url: http://3.6.33.247/estimators/retrain**
+**Url: http://ai.qik.ai/estimators/retrain**
 
 **method : get**
 
-------------
+**Query Params:**
 
-**input:**
-Query Params :
+    {   "dataset" : "xxxxx" },
+    {   "algorithm" : "xxxxxxxx" },
+    {   "feature_columns" :"xxxxxx" },
+    {   "label" : "xxxxx"},
+    {   "train_steps" : "xxxx"}
 
-[
-    {"key":"dataset","value":"xxxxx"},
-    {"key":"algorithm","value":"xxxxxxxx"},
-    {"key":"feature_columns","value":"xxxxxx"},
-    {"key":"label","value":"xxxxx"},
-    {"key":"train_steps","value":"xxxx"}
-    ]
-
-------------
 
 **output parameters :**
 
@@ -86,7 +72,6 @@ Query Params :
         "global_step": "xxx"
     }
 
-------------
 
 **example :**
 
@@ -95,22 +80,19 @@ retrain example :
 [![retrainData](%image_url%/comodo/retrain.png "retrainData")](%image_url%/comodo/retrain.png "retrainData")
 
 ------------
+------------
 
 # Predict 
 
 this api is to make a single prediction.
 
-------------
 
-**Url: http://3.6.33.247/estimators/predict**
+**Url: http://ai.qik.ai/estimators/predict**
 
 **method : get**
 
-**Content-Type : application/json**
+**Query Params:**
 
-------------
-
-**input:**
 
 For DNNClassifier or DNNRegreesor:
 
@@ -121,6 +103,7 @@ For DNNClassifier or DNNRegreesor:
 	    "label":"xxxxxxx",
 	    "predict_values": ['xxx',xxx, xx.xx]   # ['str',int, float]
     }
+
 
 For LinearClassifier or LinearRegressor:
 
@@ -133,7 +116,6 @@ For LinearClassifier or LinearRegressor:
 	    "predict_values": ['xxx',xxx, xx.xx]   # ['str',int, float]
     }
 
-------------
 
 **output parameters :**
 
@@ -143,34 +125,41 @@ for Regression Result :
         "result for record ": "Predicted Value of xxxxxx is [xxxxxx]"  #label , result
     }
 
+for Classification Result:
 
-------------
+    {
+        "result for record ": "Prediction is xx with xxx%  accuracy"
+    }
+
+
 
 **example :**
 
+regression:
+
 [![predictData](%image_url%/comodo/predict.png "predictData")](%image_url%/comodo/predict.png "predictData") 
 
+
+classification:
+
+[![predictData2](%image_url%/comodo/predict2.png "predictData2")](%image_url%/comodo/predict2.png "predictData2")
+
+
+------------
 ------------
 
 # deleteModel 
 
 this api delete the model.
 
-------------
-
-**Url: http://3.6.33.247/estimators/delete**
+**Url: http://ai.qik.ai/estimators/delete**
 
 **method : get**
 
-------------
+**Query Params:**
 
-**input:**
-Query Params :
-
-    {"key":"dataset","value":"xxxxxxxxx"},
-    {"key":"algorithm","value":"xxxxxxxxx"},
-
-------------
+    { "dataset" : "xxxxxxxxx"}
+    { "algorithm" : "xxxxxxxxx"}
 
 **output parameters :**
 
@@ -179,10 +168,9 @@ Query Params :
         "message": "xxxxx is removed"
     }
 
-------------
-
 **example :**
 
 [![deleteModel](%image_url%/comodo/delete.png "deleteModel")](%image_url%/comodo/delete.png "deleteModel")
 
+------------
 ------------

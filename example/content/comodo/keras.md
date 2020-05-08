@@ -2,28 +2,28 @@
 Title: keras
 */
 
+
 # Image Prediction
 
 this api is to predict image classes on pretrained models.
 
 pretrained models - inception , mobilenet, xception.
 
-------------
 
-**Url: http://3.6.33.247/keras/image_prediction**
+**Url: http://ai.qik.ai/keras/image_prediction**
 
 **method : post**
 
-------------
+**headers:**
 
-**input:**
+    {   "Content-Type" : "multipart/form-data" }
 
-Query Params :
-    
-{"key":"image","type":"file","value":"xxxx"}
-{"key":"pretrainedModel","value":"xxxxx"}
 
-------------
+**body:**
+
+    {   "image": insert a image file}
+    {   "pretrainedModel" : "xxxxx" } //options -inception,mobilenet,xception
+
 
 **output parameters :**
 
@@ -39,13 +39,11 @@ Query Params :
         }
     }
 
-------------
 
 **example :**
 
 
-[![imagePrediction](%image_url%/comodo/image_prediction.png "imagePrediction")](%image_url%/comodo/image_prediction.png "imagePrediction")
+[![imagePrediction](%image_url%/comodo/imagePrediction.png "imagePrediction")](%image_url%/comodo/imagePrediction.png "imagePrediction")
 
 ------------
 ------------
-

@@ -2,7 +2,7 @@
 Title: data
 */
 
-# csv file upload
+# csv file upload 
 
 this api helps to upload the csv file into the application.
 
@@ -26,8 +26,9 @@ this api helps to upload the csv file into the application.
 
 **example :**
 
-[![csvUpload](%image_url%/comodo/csv_upload.png "csvUpload")](%images_url%/comodo/csv_upload.png "csvUpload")
+[![csvUpload](%image_url%/comodo/csvupload.png "csvUpload")](%image_url%/comodo/csvupload.png "csvUpload")
 
+------------
 ------------
 
 # getDataFromParse 
@@ -37,17 +38,19 @@ this api helps to save the data from parseServer into the csv file.
 
 **Url: http://ai.qik.ai/data/getDataFromParse**
 
-**method : get**
+**method : post**
+
+
+**headers:**
+
+    {   "X-Parse-Application-Id" : "xxxxx" }
+    {   "Content-Type" : "application/json"   }
 
 **body:**
 
-    params:
-
-    "key":"parseUrl","value":"xxxxxx"
-
-    "key":"header","value":"xxxxx"
-
-
+    {
+	    "parseUrl":"xxxxxxxxxxx"
+    }
 
 **result :**
 
@@ -58,7 +61,7 @@ this api helps to save the data from parseServer into the csv file.
 
 **example :**
 
-[![parseData2](%image_url%/comodo/dataFromParse.png "parseData2")](!%5Bscreen-shots%5D/comodo/dataFromParse.png "parseData2")
+[![getDataFromParse](%image_url%/comodo/getDataFromParse.png "getDataFromParse")](%image_url%/comodo/getDataFromParse.png "getDataFromParse")
 
 ------------
 ------------

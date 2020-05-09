@@ -2,38 +2,38 @@
 Title: notifyProducers
 */
 
+
+------------
+
 Postman Collection - https://www.getpostman.com/collections/ebbc1cb54d3bab54a22b
 
+------------
 
 ## NotifyDevice Producer
 
 This API send notification to android device .
 
-**url: http://qik-node:qik-node@actions.qik.ai/deviceNotification**
+------------
 
-**method : post**
+    url:        http://qik-node:qik-node@actions.qik.ai/deviceNotification
 
-**headers:**
+    method :    post
 
-    {"key" : "Content-Type",  "value" : "application/json"}
+    headers:    { "Content-Type" : "application/json"}
+    
+    body:       {
+                    "fcmTokenKey":"xxxxx",
+                    "deviceId": "xxxxx",      
+                    "notificationTitle":"xxxxx",
+                    "notificationMessage": "xxxxx"
+                }
 
-**body :**
-
-    {
-        "fcmTokenKey":"xxxxx",
-        "deviceId": "xxxxx",
-        "notificationTitle":"xxxxx",
-        "notificationMessage": "xxxxx"
-    }
+    Result:     inserted in queue
 
 **Note:**
 
 1. 'fcmTokenKey' is optional and for configuring new fcmToken.
     
-**Result:**
-
-    inserted in queue
-
 
 **example :**
 
@@ -50,37 +50,33 @@ Result:
 [![response](%image_url%/qik-node-actions/response.png "response")](!%5Bscreen-shots%5D/response.png "response")
 
 ------------
+------------
 
 ## NotifyTopic Producer
 
 This API send notification to android devices which are subscribed to the topic .
 
-**url: http://qik-node:qik-node@actions.qik.ai/topicNotification**
+------------
 
-**method : post**
+    url:        http://qik-node:qik-node@actions.qik.ai/topicNotification
 
-**headers:**
+    method :    post
 
-    {"key" : "Content-Type",  "value" : "application/json"}
+    headers:    {   "Content-Type" : "application/json" }
 
-**body :**
+    body:       {
+                    "fcmTokenKey":"xxxxx",
+                    "topicName": "xxxxx",       //subscribed topic name
+                    "notificationTitle":"xxxxxx",
+                    "notificationMessage": "xxxxx"
+                }
 
-    {
-        "fcmTokenKey":"xxxxx",
-        "topicName": "xxxxx",
-        "notificationTitle":"xxxxxx",
-        "notificationMessage": "xxxxx"
-    }
+    Result:     inserted in queue
 
 **Note:**
 
 1. 'fcmTokenKey' is optional and for configuring new fcmToken.
     
-**Result:**
-
-    inserted in queue
-
-
 **example :**
 
 default :

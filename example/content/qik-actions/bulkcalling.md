@@ -2,47 +2,53 @@
 Title: bulkcalling
 */
 
+------------
+
+Postman Collection - https://www.getpostman.com/collections/b07869d105ab39fde583
+
+------------
+
 # BulkCalling Call
 
+This Api calls to multiple varified numbers from exotel for the given campaign name.
+for ex. Drona
 
-**URL Link: https://qik-actions.herokuapp.com/bulkcalling/call/**
+------------
 
-**method : post**
+    url:        https://qik-actions.herokuapp.com/bulkcalling/call/
 
-**Content-Type : application/json**
+    method :    post
 
-This Api calls to multiple varified numbers from exotel regarding drona app survey.
+    header:     {"Content-Type" : "application/json"}
 
-**input parameters :**
+    body:
+                Default Parameters :
 
-Default Parameters :
-
-    {
-	    "mobile_number":"7304937696",
-	    "campaign":"Drona"
-    }
+                    {
+                        "mobile_number":"7304937696",
+                        "campaign":"Drona"
+                    }
 
 
-Dynamic Parameters:
+                Dynamic Parameters:
 
-    {
-	    "exotel_sid":"xxxxxxx",
-	    "api_key":"xxxxxxx",
-	    "api_token":"xxxxxxxxxx",
-	    "exotel_number":"xxxxxxxxxxx",
-	    "exotel_caller_id":"xxxx",
-	    "campaign":"xxxxxx",
-        "mobile_number":"xxxxxxxxxx, xxxxxxxxxx, xxxxxxxxxx"
-    }
+                    {
+                        "exotel_sid":"xxxxxxx",
+                        "api_key":"xxxxxxx",
+                        "api_token":"xxxxxxxxxx",
+                        "exotel_number":"xxxxxxxxxxx",
+                        "exotel_caller_id":"xxxx",
+                        "campaign":"xxxxxx",
+                        "mobile_number":"xxxxxxxxxx, xxxxxxxxxx, xxxxxxxxxx"
+                    }
 
-**output parameters :**
+    result:     {
+                    "status": "Success"
+                }
 
-    {
-        "status": "Success"
-    }
+**Notes:**
 
-**prerequisites :**
-- mobile number should be varified. 
+    1.mobile number should be varified. 
 
 **example :**
 
@@ -51,25 +57,21 @@ Dynamic Parameters:
 ------------
 ------------
 
-# Bulk Calling Records
+#   Bulk Calling Records
 
-This API generate reports of bulkcalling status.
+This API generate reports of campaign.
 
+------------
 
-**URL Link: https://qik-actions.herokuapp.com/bulkcalling/report/**
+    url:            https://qik-actions.herokuapp.com/bulkcalling/report/
 
-**method : get**
+    method :        get
 
-**Content-Type : application/json**
+    quary params:   {"campaign": "xxxxxx"}
 
-**Input Params :**
-
-campaign = xxxxxx
-
-**output parameters :**
-
-Mobile Number,Response
-07304937696,Satisfied With Application
+    result:
+            Mobile Number,Response
+            xxxxxxx,xxxxx
 
 
 **example :**

@@ -2,6 +2,12 @@
 Title: slack
 */
 
+------------
+
+Postman Collection - https://www.getpostman.com/collections/b07869d105ab39fde583
+
+------------
+
 # slackToChannel
 
 This API is sends Message To 'nxgapis' channel on Slack .

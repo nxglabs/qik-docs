@@ -2,32 +2,36 @@
 Title: mailProducers
 */
 
+------------
+
 Postman Collection - https://www.getpostman.com/collections/ebbc1cb54d3bab54a22b
 
+------------
 
-## GMAIL producer
+#   GMAIL producer
 
 This Api Send mail from gmail account.
 
-**url: http://qik-node:qik-node@actions.qik.ai/gmailProducer**
+------------
 
-**method : post**
+    url:        http://qik-node:qik-node@actions.qik.ai/gmailProducer
 
-**headers:**
+    method :    post
 
-    {"key" : "Content-Type",  "value" : "application/json"}
+    headers:    { "Content-Type" : "application/json"}
 
-**body :**
+    body:       {
+                    "username": "xxxxx",
+                    "password": "xxxxx",
+                    "to": "xxxxxx",
+                    "cc": "xxxxxx",
+                    "bcc": "xxxxx",
+                    "subject": "xxxxx",
+                    "body": "xxxxx"
+                }
 
-    {
-        "username": "xxxxx",
-        "password": "xxxxx",
-        "to": "xxxxxx",
-        "cc": "xxxxxx",
-        "bcc": "xxxxx",
-        "subject": "xxxxx",
-        "body": "xxxxx"
-    }
+    result:     inserted in queue
+
 
 **Note:**
 
@@ -35,11 +39,6 @@ This Api Send mail from gmail account.
 2. multiple receivers are ',' seperated.
 3. 'username' and 'password' are optional and for configuring new sender user.
     
-**Result:**
-
-    inserted in queue
-
-
 **example :**
 
 default :
@@ -57,41 +56,37 @@ Result:
 
 ------------
 
-## SMTP producer:
+#   SMTP producer:
 
 This Api Send mail from any smtp account.
 
-**url: http://qik-node:qik-node@actions.qik.ai/smtpProducer**
+------------
 
-**method : post**
+    url:        http://qik-node:qik-node@actions.qik.ai/smtpProducer
 
-**headers:**
+    method :    post
 
-    {"key" : "Content-Type",  "value" : "application/json"}
+    headers:    {   "Content-Type" : "application/json"}
 
-**body :**
+    body:       {
+                    "username": "xxxxx",
+                    "password": "xxxxx",
+                    "host":"xxxxx",
+                    "port":"xxxxx",
+                    "to": "xxxxxx",
+                    "cc": "xxxxxx",
+                    "bcc": "xxxxx",
+                    "subject": "xxxxx",
+                    "body": "xxxxx"
+                }
 
-    {
-        "username": "xxxxx",
-        "password": "xxxxx",
-        "host":"xxxxx",
-        "port":"xxxxx",
-        "to": "xxxxxx",
-        "cc": "xxxxxx",
-        "bcc": "xxxxx",
-        "subject": "xxxxx",
-        "body": "xxxxx"
-    }
+    result:     inserted in queue
 
 **Note:**
 
 1. 'cc', 'bcc', 'to' are all optional but atleast one is must
 2. multiple receivers are ',' seperated.
 3. 'username','password','host' and 'port' are optional and for configuring new user.
-    
-**Result:**
-
-    inserted in queue
 
 **example :**
 
@@ -108,38 +103,35 @@ Result:
 [![response](%image_url%/qik-node-actions/response.png "response")](%image_url%/qik-node-actions/response.png "response")
 
 ------------
+------------
 
-## MAILGUN
+#   MAILGUN Producer
 
 This API send simple text mail to only validate receivers.
 
-**url: http://qik-node:qik-node@actions.qik.ai/mailgunProducer**
+------------
 
-**method : post**
+    url:        http://qik-node:qik-node@actions.qik.ai/mailgunProducer
 
-**headers:**
+    method :    post
 
-    {"key" : "Content-Type",  "value" : "application/json"}
+    headers:    {   "Content-Type" : "application/json"}
 
-**body :**
+    body:       {
+                    "apiKey": "xxxxx",
+                    "domain": "xxxxx",
+                    "from":"xxxxx",
+                    "to": "xxxxxx",
+                    "subject": "xxxxx",
+                    "body": "xxxxx"
+                    }
 
-    {
-        "apiKey": "xxxxx",
-        "domain": "xxxxx",
-        "from":"xxxxx",
-        "to": "xxxxxx",
-        "subject": "xxxxx",
-        "body": "xxxxx"
-    }
+    Result:     inserted in queue
+
 
 **Note:**
 
 1. 'apiKey' and 'domain' are optional and for configuring new user.
-    
-**Result:**
-
-    inserted in queue
-
 
 **example :**
 
@@ -156,32 +148,34 @@ Result:
 [![response](%image_url%/qik-node-actions/response.png "response")](!%5Bscreen-shots%5D/response.png "response")
 
 ------------
+------------
 
-## SESMAIL Producer
+#   SESMAIL Producer
 
 This API send simple text mail to only validate receivers.
 
-**url: http://qik-node:qik-node@actions.qik.ai/sesmailProducer**
+------------
 
-**method : post**
+    url:        http://qik-node:qik-node@actions.qik.ai/sesmailProducer
 
-**headers:**
+    method:     post
 
-    {"key" : "Content-Type",  "value" : "application/json"}
+    headers:    {   "Content-Type" : "application/json"}
 
-**body :**
+    body:       {
+   true                 "awsAccessKey": "xxxxx",
+                    "awsSecretKey": "xxxxx",
+                    "awsRegion": "xxxxx",
+                    "from":"xxxxx",
+                    "to":"xxxxx",
+                    "cc":"xxxxx",
+                    "bcc":"xxxxx",
+                    "subject":"xxxxx",
+                    "body":"xxxxx"
+                }
 
-    {
-        "awsAccessKey": "xxxxx",
-        "awsSecretKey": "xxxxx",
-        "awsRegion": "xxxxx",
-        "from":"xxxxx",
-        "to":"xxxxx",
-        "cc":"xxxxx",
-        "bcc":"xxxxx",
-        "subject":"xxxxx",
-        "body":"xxxxx"
-    }
+    Result:     inserted in queue
+
 
 **Note:**
 
@@ -189,10 +183,6 @@ This API send simple text mail to only validate receivers.
 2. multiple receivers are ',' seperated.
 3. 'awsAccessKey','awsSecretKey','awsRegion' are optional and for configuring new user.
     
-**Result:**
-
-    inserted in queue
-
 
 **example :**
 

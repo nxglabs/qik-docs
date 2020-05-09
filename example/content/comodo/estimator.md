@@ -2,39 +2,49 @@
 Title: estimator
 */
 
+------------
 
-# Train 
+Postman Collection - https://www.getpostman.com/collections/0c533b502b2b89d1e4cc
+
+------------
+
+# TrainModel
 
 this api is to train the model.
 
-**Url: http://ai.qik.ai/estimators/train**
+    Url:            http://ai.qik.ai/estimators/train
 
-**method : get**
+    method :        get
+
+    Query Params:   {   
+                        "dataset" : "xxxxxxx",    //saved csv file  ex. LVH.csv
+                        "algorithm" : "xxxxxxxxx", //ex. DNNClassifier, DNNRegressor
+                        "feature_columns" : "xxxxxxx", //Which are we want to use fro train
+                        "label" : "xxxxxxxx", //column which we want to predict
+                        "train_steps" : xxxx //default 100, no. of steps model to train
+                        "eval_steps": xxx // default 100 , no. of steps to evaluate trained model 
+                        "n_classes": xx // default 2 , no of classes for classification
+
+                    }
+
+    result:         {
+                        "algorithm": "xxxxx",
+                        "features": "xxxxx",
+                        "label": "xxxxx",
+                        "dataset": "xxxxx",
+                        "average_loss": "xxx.xxxx",
+                        "loss": "xx.xxx",
+                        "global_step": "xxx"
+                    }
 
 
-**Query Params:**
+"Notes" 
 
-    {   "dataset" : "xxxxxxx" },
-    {   "algorithm" : "xxxxxxxxx" },
-    {   "feature_columns" : "xxxxxxx" },
-    {   "label" : "xxxxxxxx" },
-    {   "train_steps" : xxxx }
-
-**output parameters :**
-
-    {
-        "algorithm": "xxxxx",
-        "features": "xxxxx",
-        "label": "xxxxx",
-        "dataset": "xxxxx",
-        "average_loss": "xxx.xxxx",
-        "loss": "xx.xxx",
-        "global_step": "xxx"
-    }
-
+    1.Query Params Required - dataset,algorithm,feature_columns,label.
+    
+    2.Query Params Optional - train_steps,eval_steps, n_classes
 
 **example :**
-
 
 [![trainData](%image_url%/comodo/train.png "trainData")](%image_url%/comodo/train.png "trainData")
 
@@ -42,40 +52,43 @@ this api is to train the model.
 ------------
 
 
-# Retrain 
+# RetrainModel
 
 this api is to retrain the dataset over the model.
 
 
-**Url: http://ai.qik.ai/estimators/retrain**
+    Url:            http://ai.qik.ai/estimators/retrain
 
-**method : get**
+    method :        get
 
-**Query Params:**
+    Query Params:   {   
+                        "dataset" : "xxxxxxx",    //saved csv file  ex. LVH.csv
+                        "algorithm" : "xxxxxxxxx", //ex. DNNClassifier, DNNRegressor
+                        "feature_columns" : "xxxxxxx", //Which are we want to use fro train
+                        "label" : "xxxxxxxx", //column which we want to predict
+                        "train_steps" : xxxx //default 100, no. of steps model to train
+                        "eval_steps": xxx // default 100 , no. of steps to evaluate trained model 
+                        "n_classes": xx // default 2 , no of classes for classification
 
-    {   "dataset" : "xxxxx" },
-    {   "algorithm" : "xxxxxxxx" },
-    {   "feature_columns" :"xxxxxx" },
-    {   "label" : "xxxxx"},
-    {   "train_steps" : "xxxx"}
+                    }
+
+    result:         {
+                        "algorithm": "xxxxx",
+                        "features": "xxxxx",
+                        "label": "xxxxx",
+                        "dataset": "xxxxx",
+                        "average_loss": "xxx.xxxx",
+                        "loss": "xx.xxx",
+                        "global_step": "xxx"
+                    }
 
 
-**output parameters :**
+Notes - 
 
-    {
-        "algorithm": "xxxxx",
-        "features": "xxxxx",
-        "label": "xxxxx",
-        "dataset": "xxxxx",
-        "average_loss": "xxx.xxxx",
-        "loss": "xx.xxx",
-        "global_step": "xxx"
-    }
-
-
+    Query Params Required - dataset,algorithm,feature_columns,label.
+    
+    Query Params Optional - train_steps,eval_steps, n_classes
 **example :**
-
-retrain example :
 
 [![retrainData](%image_url%/comodo/retrain.png "retrainData")](%image_url%/comodo/retrain.png "retrainData")
 
@@ -87,49 +100,41 @@ retrain example :
 this api is to make a single prediction.
 
 
-**Url: http://ai.qik.ai/estimators/predict**
+    Url: http://ai.qik.ai/estimators/predict
 
-**method : get**
+    method : get
 
-**Query Params:**
+    Query Params:
+        For DNNClassifier or DNNRegreesor:
+            {
+                "dataset" : "xxxxxxx",    //saved csv file  ex. LVH.csv
+                "algorithm" : "xxxxxxxxx", //ex. DNNClassifier, DNNRegressor
+                "feature_columns" : "xxxxxxx", //Which are we want to use fro train
+                "label" : "xxxxxxxx", //column which we want to predict
+                "predict_values": [xxxx]    //['xxx'(str),xxx(int), xx.xx(float)] 
+            }
+    
+        For LinearClassifier or LinearRegressor:
 
+            {
+                "dataset" : "xxxxxxx",    //saved csv file  ex. LVH.csv
+                "algorithm" : "xxxxxxxxx", //ex. DNNClassifier, DNNRegressor
+                "feature_columns" : "xxxxxxx", //Which are we want to use fro train
+                "label" : "xxxxxxxx", //column which we want to predict
+                "hidden_units": xx, //default 10,10,10
+                "predict_values": [xxx]   //['xxx'(str),xxx(int), xx.xx(float)]
+            }
 
-For DNNClassifier or DNNRegreesor:
+    result:
+        for Regression Result :
+            {
+                "result for record ": "Predicted Value of xxxxxx is [xxxxxx]"  #label , result
+            }
 
-    {
-	    "dataset":"xxxxxxxxx",
-	    "algorithm":"xxxxxxx",
-	    "feature_columns":"xxxxxxxxxx,xxxxxxxx,xxxxxxx ....",
-	    "label":"xxxxxxx",
-	    "predict_values": ['xxx',xxx, xx.xx]   # ['str',int, float]
-    }
-
-
-For LinearClassifier or LinearRegressor:
-
-    {
-	    "dataset":"xxxxxxx",
-	    "algorithm":"xxxxxxx",
-	    "feature_columns":"xxxxx,xxxxxxx,xxxxx",
-	    "label":"xxxx",
-        "hidden_units":"xx,xx ...",
-	    "predict_values": ['xxx',xxx, xx.xx]   # ['str',int, float]
-    }
-
-
-**output parameters :**
-
-for Regression Result :
-
-    {
-        "result for record ": "Predicted Value of xxxxxx is [xxxxxx]"  #label , result
-    }
-
-for Classification Result:
-
-    {
-        "result for record ": "Prediction is xx with xxx%  accuracy"
-    }
+        for Classification Result:
+            {
+                "result for record ": "Prediction is xx with xxx%  accuracy"
+            }
 
 
 
@@ -152,21 +157,19 @@ classification:
 
 this api delete the model.
 
-**Url: http://ai.qik.ai/estimators/delete**
+    Url:            http://ai.qik.ai/estimators/delete
 
-**method : get**
+    method :        get
 
-**Query Params:**
+    Query Params:   { 
+                        "dataset" : "xxxxxxx",    //saved csv file  ex. LVH.csv
+                        "algorithm" : "xxxxxxxxx", //ex. DNNClassifier, DNNRegressor
+                    }
 
-    { "dataset" : "xxxxxxxxx"}
-    { "algorithm" : "xxxxxxxxx"}
-
-**output parameters :**
-
-    {
-        "Status": "Success",
-        "message": "xxxxx is removed"
-    }
+    result:         {
+                        "Status": "Success",
+                        "message": "xxxxx is removed"
+                    }
 
 **example :**
 

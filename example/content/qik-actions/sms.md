@@ -2,6 +2,12 @@
 Title: sms
 */
 
+------------
+
+Postman Collection - https://www.getpostman.com/collections/b07869d105ab39fde583
+
+------------
+
 # SENDSMS
 This api send sms from onlinebulksms server.
 
@@ -88,13 +94,13 @@ default server -  livedrona
 
 ------------
 
-**send_bulksms url : https://qik-actions.herokuapp.com/sms/send_bulksms/**
+**url : https://qik-actions.herokuapp.com/sms/send_bulksms/**
 
 **method : post**
 
-**Content-Type : application/json**
-
-------------
+**headers:**
+    
+        {"Content-Type" : "application/json"}
 
 **input parameters :**
 

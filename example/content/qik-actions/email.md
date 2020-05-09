@@ -1,6 +1,11 @@
 /*
 Title: email
 */
+------------
+
+Postman Collection - https://www.getpostman.com/collections/b07869d105ab39fde583
+
+------------
 
 # GMAIL
 

@@ -2,36 +2,35 @@
 Title: slackProducers
 */
 
+------------
+
 Postman Collection - https://www.getpostman.com/collections/ebbc1cb54d3bab54a22b
+
+------------
 
 ## slackToChannel Producer
 
 This API send slack to channel .
 
-**url: http://qik-node:qik-node@actions.qik.ai/slackToChannel**
+------------
 
-**method : post**
+    url:        http://qik-node:qik-node@actions.qik.ai/slackToChannel
 
-**headers:**
+    method :    post
 
-    {"key" : "Content-Type",  "value" : "application/json"}
+    headers:    { "Content-Type" : "application/json" }
 
-**body :**
+    body:       {
+                    "slackApiToken":"xxxxx",
+                    "slackChannelName":"#xxxxx",
+                    "slackMessage":"xxxxx"
+                }
 
-    {
-        "slackApiToken":"xxxxx",
-        "slackChannelName":"#xxxxx",
-        "slackMessage":"xxxxx"
-    }
+    Result:     inserted in queue
 
 **Note:**
     
 1. 'slackApiToken' is optional and for configuring new slackApiToken.
-    
-**Result:**
-
-    inserted in queue
-
 
 **example :**
 
@@ -53,30 +52,27 @@ Result:
 
 This API send slack to user .
 
-**url: http://qik-node:qik-node@actions.qik.ai/slackToUser**
+------------
 
-**method : post**
+    url:        http://qik-node:qik-node@actions.qik.ai/slackToUser
 
-**headers:**
+    method:     post
 
-    {"key" : "Content-Type",  "value" : "application/json"}
+    headers:    { "Content-Type" : "application/json" }
 
-**body :**
+    body:       {	
+                    "slackApiToken":"xxxxx",
+                    "slackUser":"@xxxxx",
+                    "slackMessage":"xxxxx"
+                }
 
-    {	
-        "slackApiToken":"xxxxx",
-        "slackUser":"@xxxxx",
-        "slackMessage":"xxxxx"
-    }
+    Result:     inserted in queue
+
 
 **Note:**
 
 1. 'slackApiToken' is optional and for configuring new slackApiToken.
     
-**Result:**
-
-    inserted in queue
-
 
 **example :**
 

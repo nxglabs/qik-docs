@@ -2,26 +2,32 @@
 Title: data
 */
 
+------------
+
+Postman Collection - https://www.getpostman.com/collections/0c533b502b2b89d1e4cc
+
+------------
+
 # csv file upload 
 
 this api helps to upload the csv file into the application.
 
+    Url:        http://ai.qik.ai/data/upload/
 
-**Url: http://ai.qik.ai/data/upload/**
+    method :    post
 
-**method : post**
+    headers:    { "Content-Type" : "multipart/form-data"}
 
-**body:**
+    body:       {
+                    "file": upload a csv file,
+                    "remark": "xxxxx"        //filename
+                    }
 
-    Content-Disposition: form-data; name="remark" value="xxxx"
-
-**output parameters :**
-
-    {
-        "file": "/media/dataset/xxxx.xxx",
-        "remark": "xxxxx",
-        "timestamp": "xxxx-xx-xxxxx:xx:xx.xxxxxx"
-    }
+    result:     {
+                    "file": "/media/dataset/xxxx.xxx",
+                    "remark": "xxxxx",
+                    "timestamp": "xxxx-xx-xxxxx:xx:xx.xxxxxx"
+                    }
 
 
 **example :**
@@ -36,28 +42,23 @@ this api helps to upload the csv file into the application.
 this api helps to save the data from parseServer into the csv file.
 
 
-**Url: http://ai.qik.ai/data/getDataFromParse**
+    Url:        http://ai.qik.ai/data/getDataFromParse
 
-**method : post**
+    method :    post
 
-
-**headers:**
-
-    {   "X-Parse-Application-Id" : "xxxxx" }
-    {   "Content-Type" : "application/json"   }
-
-**body:**
-
-    {
-	    "parseUrl":"xxxxxxxxxxx"
-    }
-
-**result :**
-
-    {
-        "status": "success",
-        "message": "object data saved as xxxxx.csv"
-    }
+    headers:    {   
+                    "X-Parse-Application-Id" : "xxxxx" ,
+                    "Content-Type" : "application/json"   
+                    }
+    
+    body:       {
+	                "parseUrl":"xxxxxxxxxxx"
+                    }
+    
+    result:     {
+                    "status": "success",
+                    "message": "object data saved as xxxxx.csv"
+                    }
 
 **example :**
 

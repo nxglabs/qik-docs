@@ -2,24 +2,25 @@
 Title: analysis
 */
 
+------------
+
+Postman Collection - https://www.getpostman.com/collections/0c533b502b2b89d1e4cc
+
+------------
+
 # Sentiment Analysis 
 
 this api helps to differentiate between positive and negative reviews.
 
+    url:        http://ai.qik.ai/analysis/sentiment
 
-**url: http://ai.qik.ai/analysis/sentiment**
+    method :    get
 
-**method : get**
+    params:     {   "review" : "xxxx" }
 
-**params:**
-
-    {   "review" : "xxxx" }
-
-**result :**
-
-    {
-        "result": "xxxxx Review"
-    }
+    result :    {
+                    "result": "xxxxx Review"
+                    }
 
 **example :**
 
@@ -32,24 +33,18 @@ this api helps to differentiate between positive and negative reviews.
 
 this api helps to generate caption by uploading a image.
 
-**Url: http://ai.qik.ai/analysis/captionGenerationByImage**
+    Url:        http://ai.qik.ai/analysis/captionGenerationByImage
 
-**method : post**
+    method:     post
 
-**headers:**
+    headers:    {   "Content-Type" : "multipart/form-data" }
 
-    {   "Content-Type" : "multipart/form-data" }
+    body:       {   "image" : upload a image file }
 
-**body:**
-
-    {   "image" : upload a image file }
-
-**result:**
-
-    {
-        "Image Name": "xxxxx",
-        "caption": "xxxxx"
-    }
+    result:     {
+                    "Image Name": "xxxxx",
+                    "caption": "xxxxx"
+                    }
 
 
 **example :**
@@ -63,23 +58,15 @@ this api helps to generate caption by uploading a image.
 
 this api helps to generate caption by providing a image url.
 
-**Url: http://ai.qik.ai/analysis/captionGenerationByUrl**
-
-**method : post**
-
-**headers:**
-
-    {   "Content-Type" : "application/json" }
-
-**body:**
-
-    {   "imageUrl" : "xxxxx" }
-
-**result:**
-
-    {
-        "caption": "xxxxx"
-    }
+    Url:        http://ai.qik.ai/analysis/captionGenerationByUrl
+    
+    method:    post
+    
+    headers:    {   "Content-Type" : "application/json" }
+    
+    body:       {   "imageUrl" : "xxxxx" }
+    
+    result:     {   "caption": "xxxxx"  }
 
 
 **example :**
@@ -94,28 +81,43 @@ this api helps to generate caption by providing a image url.
 
 this api helps detect emotion from uploaded face images.
 
-**url: http://ai.qik.ai/analysis/emotionDetectionByImage**
 
-**method : post**
+    url:        http://ai.qik.ai/analysis/emotionDetectionByImage
 
-**headers:**
+    method :    post
 
-    {   "Content-Type" : "multipart/form-data" }
+    headers:    {   "Content-Type" : "multipart/form-data" }
 
-**body:**
+    body:       {   "image" : upload a image file }
 
-    {   "image" : upload a image file }
-
-**result :**
-
-    {
-        "Image Name": "xxxx",
-        "Emotion": "xxxx"
-    }
+    result:     {
+                    "Image Name": "xxxx",
+                    "Emotion": "xxxx"
+                    }
 
 **example :**
 
 [![emotionDetectionByImage](%image_url%/comodo/emotionDetectionByImage.png "emotionDetectionByImage")](%image_url%/comodo/emotionDetectionByImage.png "emotionDetectionByImage")
+
+------------
+
+# emotionDetectionByUrl
+
+this api helps detect emotion from given image url.
+
+    url:        http://ai.qik.ai/analysis/emotionDetectionByUrl
+    
+    method:     post
+    
+    headers:    {   "Content-Type" : "application/json" }
+
+    body:       {   "imageUrl" : "xxxxx" }
+
+    result:     {   "Emotion": "xxxx"   }
+
+**example :**
+
+[![emotionDetectionByUrl](%image_url%/comodo/emotionDetectionByUrl.png "emotionDetectionByUrl")](%image_url%/comodo/emotionDetectionByUrl.png "emotionDetectionByUrl")
 
 ------------
 ------------

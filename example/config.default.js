@@ -63,7 +63,7 @@ var config = {
   authentication_for_edit: true,
 
   // If authentication is enabled, set this to true to enable authentication for reading too
-  authentication_for_read: false,
+  authentication_for_read: true,
 
   // Google OAuth
   googleoauth: false,

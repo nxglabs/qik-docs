@@ -22,14 +22,24 @@ SmsProviderLink - www.onlinebulksmslogin.com
     headers:    { "Content-Type" : "application/json" }
 
 
-    body:       {
+    body:       
+    
+        for default configuration:
+        
+                {
+                    "message":"xxxxx",
+                    "receiver":"xxxxx"
+                }
+
+        for dynamic configuration:
+        
+                {
                     "username":"xxxxx",    
                     "password":"xxxxx",
                     "sender":"xxxxx",
                     "message":"xxxxx",
                     "receiver":"xxxxx"
                 }
-
     Result:     inserted in queue
 
 **Note:**
@@ -37,6 +47,7 @@ SmsProviderLink - www.onlinebulksmslogin.com
 1. receiver number should be 10 digit.
 2. for multiple receiver are ',' seperated.
 3. 'username','password','sender' are optional and for configuring new user.
+4. for default , default parameters from environment variables will be loaded.    
     
 
 **example :**

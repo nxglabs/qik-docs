@@ -21,7 +21,19 @@ This API send notification to android device .
 
     headers:    { "Content-Type" : "application/json"}
     
-    body:       {
+    body:       
+
+        for default configuration:
+
+                {
+                    "deviceId": "xxxxx",      
+                    "notificationTitle":"xxxxx",
+                    "notificationMessage": "xxxxx"
+                }
+
+        for dynamic configuration:
+
+                {
                     "fcmTokenKey":"xxxxx",
                     "deviceId": "xxxxx",      
                     "notificationTitle":"xxxxx",
@@ -33,7 +45,7 @@ This API send notification to android device .
 **Note:**
 
 1. 'fcmTokenKey' is optional and for configuring new fcmToken.
-    
+2. for default , default parameters from environment variables will be loaded.         
 
 **example :**
 
@@ -64,8 +76,20 @@ This API send notification to android devices which are subscribed to the topic 
 
     headers:    {   "Content-Type" : "application/json" }
 
-    body:       {
+    body:       
+    
+        for default configuration:
+
+                {
                     "fcmTokenKey":"xxxxx",
+                    "topicName": "xxxxx",       //subscribed topic name
+                    "notificationTitle":"xxxxxx",
+                    "notificationMessage": "xxxxx"
+                }
+        
+        for dynamic configuration:
+
+                {
                     "topicName": "xxxxx",       //subscribed topic name
                     "notificationTitle":"xxxxxx",
                     "notificationMessage": "xxxxx"
@@ -76,7 +100,8 @@ This API send notification to android devices which are subscribed to the topic 
 **Note:**
 
 1. 'fcmTokenKey' is optional and for configuring new fcmToken.
-    
+2. for default , default parameters from environment variables will be loaded.    
+
 **example :**
 
 default :

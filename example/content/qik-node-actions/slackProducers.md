@@ -20,17 +20,30 @@ This API send slack to channel .
 
     headers:    { "Content-Type" : "application/json" }
 
-    body:       {
+    body:       
+    
+        for default configuration:
+
+                {
+                    "slackChannelName":"#xxxxx",
+                    "slackMessage":"xxxxx"
+                }
+
+        for dynamic configuration:
+                
+                {
                     "slackApiToken":"xxxxx",
                     "slackChannelName":"#xxxxx",
                     "slackMessage":"xxxxx"
                 }
+
 
     Result:     inserted in queue
 
 **Note:**
     
 1. 'slackApiToken' is optional and for configuring new slackApiToken.
+2. for default , default parameters from environment variables will be loaded.    
 
 **example :**
 
@@ -60,7 +73,18 @@ This API send slack to user .
 
     headers:    { "Content-Type" : "application/json" }
 
-    body:       {	
+    body:       
+    
+        for default configuration:
+
+                {	
+                    "slackUser":"@xxxxx",
+                    "slackMessage":"xxxxx"
+                }
+
+        for dynamic configuration:
+
+                {	
                     "slackApiToken":"xxxxx",
                     "slackUser":"@xxxxx",
                     "slackMessage":"xxxxx"
@@ -72,7 +96,7 @@ This API send slack to user .
 **Note:**
 
 1. 'slackApiToken' is optional and for configuring new slackApiToken.
-    
+2. for default , default parameters from environment variables will be loaded.    
 
 **example :**
 

@@ -20,7 +20,21 @@ This Api Send mail from gmail account.
 
     headers:    { "Content-Type" : "application/json"}
 
-    body:       {
+    body:       
+
+        for default configuration:
+
+                {
+                    "to": "xxxxxx",
+                    "cc": "xxxxxx",
+                    "bcc": "xxxxx",
+                    "subject": "xxxxx",
+                    "body": "xxxxx"
+                }
+
+        for dynamic configuration:
+
+                {
                     "username": "xxxxx",
                     "password": "xxxxx",
                     "to": "xxxxxx",
@@ -38,7 +52,8 @@ This Api Send mail from gmail account.
 1. 'cc', 'bcc', 'to' are all optional but atleast one is must
 2. multiple receivers are ',' seperated.
 3. 'username' and 'password' are optional and for configuring new sender user.
-    
+4. for default , default parameters from environment variables will be loaded.    
+
 **example :**
 
 default :
@@ -68,7 +83,21 @@ This Api Send mail from any smtp account.
 
     headers:    {   "Content-Type" : "application/json"}
 
-    body:       {
+    body:   
+
+        for default configuration:
+                
+                {
+                    "to": "xxxxxx",
+                    "cc": "xxxxxx",
+                    "bcc": "xxxxx",
+                    "subject": "xxxxx",
+                    "body": "xxxxx"
+                }
+
+        for dynamic configuration:
+                
+                {
                     "username": "xxxxx",
                     "password": "xxxxx",
                     "host":"xxxxx",
@@ -87,6 +116,7 @@ This Api Send mail from any smtp account.
 1. 'cc', 'bcc', 'to' are all optional but atleast one is must
 2. multiple receivers are ',' seperated.
 3. 'username','password','host' and 'port' are optional and for configuring new user.
+4. for default , default parameters from environment variables will be loaded.    
 
 **example :**
 
@@ -117,7 +147,20 @@ This API send simple text mail to only validate receivers.
 
     headers:    {   "Content-Type" : "application/json"}
 
-    body:       {
+    body:   
+
+        for default configuration:
+
+                {
+                    "from":"xxxxx",
+                    "to": "xxxxxx",
+                    "subject": "xxxxx",
+                    "body": "xxxxx"
+                    }
+
+        for dynamic configuration:
+
+                {
                     "apiKey": "xxxxx",
                     "domain": "xxxxx",
                     "from":"xxxxx",
@@ -132,6 +175,7 @@ This API send simple text mail to only validate receivers.
 **Note:**
 
 1. 'apiKey' and 'domain' are optional and for configuring new user.
+2. for default , default parameters from environment variables will be loaded.    
 
 **example :**
 
@@ -162,8 +206,23 @@ This API send simple text mail to only validate receivers.
 
     headers:    {   "Content-Type" : "application/json"}
 
-    body:       {
-   true                 "awsAccessKey": "xxxxx",
+    body:  
+
+        for default configuration:
+
+                {
+                    "from":"xxxxx",
+                    "to":"xxxxx",
+                    "cc":"xxxxx",
+                    "bcc":"xxxxx",
+                    "subject":"xxxxx",
+                    "body":"xxxxx"
+                }
+
+        for dynamic configuration:
+
+                {
+                    "awsAccessKey": "xxxxx",
                     "awsSecretKey": "xxxxx",
                     "awsRegion": "xxxxx",
                     "from":"xxxxx",
@@ -182,7 +241,7 @@ This API send simple text mail to only validate receivers.
 1. 'cc', 'bcc', 'to' are all optional but atleast one is must
 2. multiple receivers are ',' seperated.
 3. 'awsAccessKey','awsSecretKey','awsRegion' are optional and for configuring new user.
-    
+4. for default , default parameters from environment variables will be loaded.    
 
 **example :**
 

@@ -81,7 +81,6 @@ This API send notification to android devices which are subscribed to the topic 
         for default configuration:
 
                 {
-                    "fcmTokenKey":"xxxxx",
                     "topicName": "xxxxx",       //subscribed topic name
                     "notificationTitle":"xxxxxx",
                     "notificationMessage": "xxxxx"
@@ -90,6 +89,7 @@ This API send notification to android devices which are subscribed to the topic 
         for dynamic configuration:
 
                 {
+                    "fcmTokenKey":"xxxxx",
                     "topicName": "xxxxx",       //subscribed topic name
                     "notificationTitle":"xxxxxx",
                     "notificationMessage": "xxxxx"
@@ -118,3 +118,103 @@ Result:
 
 ------------
 ------------
+
+## subscribeToTopic
+
+This API helps devices to subscribe To topic .
+
+------------
+
+    url:        http://qik-node:qik-node@actions.qik.ai/subscribeToTopic
+
+    method :    post
+
+    headers:    {   "Content-Type" : "application/json" }
+
+    body:       
+    
+        for default configuration:
+
+                {
+                    "topicName": "xxxxx",
+                    "deviceId":"xxxxxx"
+                }
+        
+        for dynamic configuration:
+
+                {
+                    "fcmTokenKey":"xxxxx",
+                    "topicName": "xxxxx",
+                    "deviceId":"xxxxxx"
+                }
+
+    Result:     subscribed.
+
+**Note:**
+
+1. 'fcmTokenKey' is optional and for configuring new fcmToken.
+2. for default , default parameters from environment variables will be loaded.    
+
+**example :**
+
+default :
+
+[![subscribeToTopic_default](%image_url%/qik-node-actions/notify/subscribeToTopic_def.png "subscribeToTopic_default")](%image_url%/qik-node-actions/notify/subscribeToTopic_def.png "subscribeToTopic_default")
+
+dynamic:
+
+[![subscribeToTopic_dynamic](%image_url%/qik-node-actions/notify/subscribeToTopic_dyn.png "subscribeToTopic_dynamic")](%image_url%/qik-node-actions/notify/subscribeToTopic_dyn.png "subscribeToTopic_dynamic")
+
+------------
+------------
+
+## unsubscribeToTopic
+
+This API helps devices to unsubscribe To topic .
+
+------------
+
+    url:        http://qik-node:qik-node@actions.qik.ai/unsubscribeToTopic
+
+    method :    post
+
+    headers:    {   "Content-Type" : "application/json" }
+
+    body:       
+    
+        for default configuration:
+
+                {
+                    "topicName": "xxxxx",                         "deviceId":"xxxxxx"
+                }
+        
+        for dynamic configuration:
+
+                {
+                    "fcmTokenKey":"xxxxx",
+                    "topicName": "xxxxx",       //subscribed topic name
+                    "deviceId":"xxxxxx"
+                }
+
+    Result:     unsubscribed.
+
+**Note:**
+
+1. 'fcmTokenKey' is optional and for configuring new fcmToken.
+2. for default , default parameters from environment variables will be loaded.    
+
+**example :**
+
+default :
+
+[![unsubscribeToTopic_default](%image_url%/qik-node-actions/notify/unsubscribeToTopic_def.png "unsubscribeToTopic_default")](%image_url%/qik-node-actions/notify/unsubscribeToTopic_def.png "unsubscribeToTopic_default")
+
+dynamic:
+
+[![unsubscribeToTopic_dynamic](%image_url%/qik-node-actions/notify/unsubscribeToTopic_dyn.png "unsubscribeToTopic_dynamic")](%image_url%/qik-node-actions/notify/unsubscribeToTopic_dyn.png "unsubscribeToTopic_dynamic")
+
+
+------------
+------------
+
+

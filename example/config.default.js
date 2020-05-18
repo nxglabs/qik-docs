@@ -7,7 +7,7 @@ var path = require('path');
 var config = {
 
   // Your site title (format: page_title - site_title)
-  site_title: 'qik docs',
+  site_title: 'qik ai documentation',
 
   // The base URL of your site (can use %base_url% in Markdown files)
   base_url: '',

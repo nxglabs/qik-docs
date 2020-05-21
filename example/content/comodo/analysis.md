@@ -121,3 +121,55 @@ this api helps detect emotion from given image url.
 
 ------------
 ------------
+
+
+# ObsceneImageDetectionByImage
+
+this api helps detect whether the image is obscene or not  from uploaded face images.
+
+---------------
+
+    url:        http://ai.qik.ai/analysis/obsceneImageDetection
+
+    method :    post
+
+    headers:    {   "Content-Type" : "multipart/form-data" }
+
+    body:       {   "image" : upload a image file }
+
+    result:     {
+                    "Image Name": "xxxx",
+                    "is it safe?": "xxxx"   // safe or unsafe
+                    }
+
+**example :**
+
+[![obsceneImageDetectionByImage](%image_url%/comodo/obsceneImageDetectionByImage.png "obsceneImageDetectionByImage")](%image_url%/comodo/obsceneImageDetectionByImage.png "obsceneImageDetectionByImage")
+
+------------
+
+# ObsceneImageDetectionByUrl
+
+this api helps detect whether the image is obscene or not  from given image url.
+
+-------------
+
+    url:        http://ai.qik.ai/analysis/ObsceneImageDetectionByUrl
+    
+    method:     post
+    
+    headers:    {   "Content-Type" : "application/json" }
+
+    body:       {   "imageUrl" : "xxxxx" }
+
+    result:     {   
+                    "filename": "xxxx",
+                    "is it safe?": "xxxx" // safe or unsafe
+                }
+
+**example :**
+
+[![obsceneImageDetectionByUrl](%image_url%/comodo/obsceneImageDetectionByUrl.png "obsceneImageDetectionByUrl")](%image_url%/comodo/obsceneImageDetectionByUrl.png "obsceneImageDetectionByUrl")
+
+------------
+------------

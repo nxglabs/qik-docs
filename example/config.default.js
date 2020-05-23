@@ -65,8 +65,8 @@ var config = {
   // If authentication is enabled, set this to true to enable authentication for reading too
   authentication_for_read: true,
 
-  // Google OAuth
-  googleoauth: true,
+  //Google OAuth
+  googleoauth: false,
   oauth2 : {
     client_id: '110160944618-h8lrq465bl5061s9p1bbb6ouhic26sa9.apps.googleusercontent.com',
     client_secret: 'qcVPJkfObUXVij_0pKbGet1K',

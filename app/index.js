@@ -1,6 +1,4 @@
 'use strict';
-
-// Modules
 var path          = require('path');
 var express       = require('express');
 var favicon       = require('serve-favicon');

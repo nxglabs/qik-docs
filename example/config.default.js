@@ -66,14 +66,14 @@ var config = {
   authentication_for_read: true,
 
   // Google OAuth
-  googleoauth: false,
+  googleoauth: true,
   oauth2 : {
-    client_id: 'GOOGLE_CLIENT_ID',
-    client_secret: 'GOOGLE_CLIENT_SECRET',
-    callback: 'http://localhost:3000/auth/google/callback',
+    client_id: '110160944618-h8lrq465bl5061s9p1bbb6ouhic26sa9.apps.googleusercontent.com',
+    client_secret: 'qcVPJkfObUXVij_0pKbGet1K',
+    callback: 'https://qik-docs.herokuapp.com/auth/google/callback',
     hostedDomain: 'google.com'
   },
-  secret: 'someCoolSecretRightHere',
+  secret: 'qik docs',
 
   credentials    : [
     {

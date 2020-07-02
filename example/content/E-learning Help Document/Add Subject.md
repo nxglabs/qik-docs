@@ -1,6 +1,6 @@
-#Add Subject/#
+# Add Subjects
 Subjects can be added,edited or deleted just like courses are.
-To add a Subject follow the following steps - 
+**add a Subject follow the following steps**
 1. Click on the Manage Subject->Add New Subject 
 2. Enter Subject Name-enter the subject title
 3. Upload Logo-add the subject image from the file manager

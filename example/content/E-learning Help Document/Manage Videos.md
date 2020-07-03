@@ -11,7 +11,7 @@ Course Management provides a catalog of courses for users to view
 5. Choose video type
 6. Select course 
 7. Select subject
-8. Click on submit
+8. Click on submit<br>
 For more clearity refer the following GIF image.
 ![add videos]( https://drive.google.com/uc?export=view&id=1g1E3QLwrqWo0D9rwZAeY1UnzLWqT5O8Q)
  

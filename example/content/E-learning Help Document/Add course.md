@@ -1,4 +1,4 @@
-<b>3.Add Course</b><br>You can add and manage courses using this section.<br><b>To create the course follow the following steps-</b><br>
+<b>3. Add Course</b><br>You can add and manage courses using this section.<br><b>To create the course follow the following steps-</b><br>
 1. Click on the Manage Course Menu<br>
 2. Then click on the Add New Course button<br>
 3. Fill the required fields<br>

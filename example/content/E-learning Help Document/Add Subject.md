@@ -1,4 +1,4 @@
-<b>3.Add Subject</b><br>You can add and manage subjects using this section.<br><b>To create the subject follow the following steps-</b><br>
+<b>4.Add Subject</b><br>You can add and manage subjects using this section.<br><b>To create the subject follow the following steps-</b><br>
 1. Click on the Manage Subject->Add New Subject.<br>
 2. Enter Subject Name-enter the subject title.<br>
 3. Upload Logo-add the subject image from the file manager.<br>

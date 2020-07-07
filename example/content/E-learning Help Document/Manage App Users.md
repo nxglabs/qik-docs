@@ -5,8 +5,7 @@ In case user is unable to register from the mobile application, admin can manual
 1. From menu go to the “manage app users” then click on “App user registration”
 2. Then fill out the required information.
 3. Submit the form.
-You can refer following GIF image.
-![manage users]( https://drive.google.com/uc?export=view&id=1mOah3U-rlLPAqP3n1GdyAtBqe9JcpPtv)
+You can refer following GIF image.![manage users]( https://drive.google.com/uc?export=view&id=1mOah3U-rlLPAqP3n1GdyAtBqe9JcpPtv)
 
 
 

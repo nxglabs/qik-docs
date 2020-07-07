@@ -1,4 +1,4 @@
-8. Manage Subscriptions
+**8. Manage Subscriptions**
 - Subscriber List
   - This list shows the information of users who has purchased the course. You can refer the image below.
   ![Subscriber list]( https://drive.google.com/uc?export=view&id=18gjooqT9_KrbNKdmVup_cZsOfAGGlfQw)

@@ -3,21 +3,22 @@ Document on Default functions
 
 •	It is Post function for getting otp in response 
 ___________________________________________________________________
-API Title	|    SendOTPv2
+API Title	      |    SendOTPv2
+
 ________________|__________________________________________________
-URL	        |   https://server.qik.ai/app/functions/SendOTPv2
+URL	            |   https://server.qik.ai/app/functions/SendOTPv2
 ________________|___________________________________________________
 Method	        |   Post
 ________________|___________________________________________________
-URL Params	|   --
+URL Params	    |   --
 ________________|___________________________________________________
-Body Params	|   packageName, phone
+Body Params	    |   packageName, phone
 ________________|___________________________________________________
-Headers	 	|   Key                |           Value 
+Headers	 	      |   Key                |           Value 
 ________________|______________________|____________________________
-	        |X-Parse-Application-Id| shbjmmhfcp
+	              |X-Parse-Application-Id| shbjmmhfcp
 		____________________________________________________
-	        | Content-Type	       |  application/json
+	              | Content-Type	       |  application/json
 ________________|______________________|____________________________
  
   How to use
@@ -30,7 +31,7 @@ Result:-
 1. In return of this function the otp will be return 
 1234
 2. This message will be received on given phone number 
-# You OTP is:1234 abc
+     You OTP is:1234 abc
 
 
 
@@ -76,8 +77,7 @@ ________________|______________________|____________________________
 Result:-
 1. In return of this function the otp will be return 
 1234
-2. This message will be received on given phone number 
-# You OTP is:1234 shZVjoAQhN2
+2. This message will be received on given phone number You OTP is:1234 shZVjoAQhN2
 
 
 

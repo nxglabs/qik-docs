@@ -2,10 +2,10 @@ Document on Default functions
 1.	SendOTPv2
 
 •	It is Post function for getting otp in response 
- _______________________________________________________________________________
+     ___________________________________________________________________________
         API Title	      |    SendOTPv2                                   |
      ___________________________________________________________________________
-        URL	              |   https://server.qik.ai/app/functions/SendOTPv2 |
+        URL	              |   https://server.qik.ai/app/functions/SendOTPv2|
      ___________________________________________________________________________
         Method	              |   Post                                         |
      ___________________________________________________________________________
@@ -15,10 +15,10 @@ Document on Default functions
      ___________________________________________________________________________
         Headers	 	      |   Key                  |           Value       |
      ___________________________________________________________________________
-	                      |X-Parse-Application-Id  | shbjmmhfcp       |		
-       ____________________________________________________________________
-	                      | Content-Type	       |  application/json|
- _______________________________________________________________________________
+	                      |X-Parse-Application-Id  | shbjmmhfcp            |		
+       _________________________________________________________________________
+	                      | Content-Type	       |  application/json     |
+     ___________________________________________________________________________
  
   How to use
 •	Provide input parameter and you will get otp with saved hashcode of that package

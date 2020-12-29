@@ -2,16 +2,23 @@ Document on Default functions
 1.	SendOTPv2
 
 •	It is Post function for getting otp in response 
-
-API Title	SendOTPv2
-URL	https://server.qik.ai/app/functions/SendOTPv2
- Method	Post
-URL Params	--
-Body Params	packageName, phone
-Headers	Key 	Value 
-	X-Parse-Application-Id	shbjmmhfcp
-	Content-Type	application/json
-Version	1.0
+___________________________________________________________________
+API Title	|    SendOTPv2
+________________|__________________________________________________
+URL	        |   https://server.qik.ai/app/functions/SendOTPv2
+________________|___________________________________________________
+Method	        |   Post
+________________|___________________________________________________
+URL Params	|   --
+________________|___________________________________________________
+Body Params	|   packageName, phone
+________________|___________________________________________________
+Headers	 	|   Key                |           Value 
+________________|______________________|____________________________
+	        |X-Parse-Application-Id| shbjmmhfcp
+		____________________________________________________
+	        | Content-Type	       |  application/json
+________________|______________________|____________________________
  
   How to use
 •	Provide input parameter and you will get otp with saved hashcode of that package
@@ -41,15 +48,23 @@ Result:-
 
 •	It is Post function for getting otp in response 
 
-API Title	SendOTP
-URL	https://server.qik.ai/app/functions/SendOTP
- Method	Post
-URL Params	--
-Body Params	phone
-Headers	Key 	Value 
-	X-Parse-Application-Id	shbjmmhfcp
-	Content-Type	application/json
-Version	1.0
+__________________________________________________________________ 
+API Title	|    SendOTP
+________________|__________________________________________________
+URL	        |   https://server.qik.ai/app/functions/SendOTP
+________________|___________________________________________________
+Method	        |   Post
+________________|___________________________________________________
+URL Params	|   --
+________________|___________________________________________________
+Body Params	|  phone
+________________|___________________________________________________
+Headers	 	|   Key                |           Value 
+________________|______________________|____________________________
+	        |X-Parse-Application-Id| shbjmmhfcp
+		____________________________________________________
+	        | Content-Type	       |  application/json
+________________|______________________|____________________________
  
   How to use
 •	Provide input parameter and you will get otp with saved hashcode of that elearning app
@@ -79,16 +94,24 @@ Result:-
 3.	sendsms
 
 •	It is Post function for sending sms in response 
-
-API Title	sendsms
-URL	https://server.qik.ai/app/functions/ sendsms
- Method	Post
-URL Params	--
-Body Params	receiver, message
-Headers	Key 	Value 
-	X-Parse-Application-Id	shbjmmhfcp
-	Content-Type	application/json
-Version	1.0
+__________________________________________________________________
+API Title	|   sendsms
+________________|__________________________________________________
+URL	        |   https://server.qik.ai/app/functions/sendsms
+________________|___________________________________________________
+Method	        |   Post
+________________|___________________________________________________
+URL Params	|   --
+________________|___________________________________________________
+Body Params	|  receiver, message
+________________|___________________________________________________
+Headers	 	|   Key                |           Value 
+________________|______________________|____________________________
+	        |X-Parse-Application-Id| shbjmmhfcp
+		____________________________________________________
+	        | Content-Type	       |  application/json
+________________|______________________|____________________________
+ 
  
   How to use
 •	Provide input parameter and you will get 

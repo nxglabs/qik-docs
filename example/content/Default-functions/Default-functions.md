@@ -1,4 +1,5 @@
 Document on Default functions
+
        1.SendOTPv2
 
 •	It is Post function for getting otp in response 

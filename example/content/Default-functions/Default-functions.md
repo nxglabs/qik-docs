@@ -1,5 +1,5 @@
 Document on Default functions
-1.	SendOTPv2
+       1.SendOTPv2
 
 •	It is Post function for getting otp in response 
  
@@ -42,27 +42,24 @@ Result:-
 
 
 
-2.	SendOTP
+         2.SendOTP
 
 •	It is Post function for getting otp in response 
 
-________________________________________________________________________
-        API Title	|    SendOTP                                   |
-      __________________________________________________________________
-        URL	        |   https://server.qik.ai/app/functions/SendOTP|
-      __________________________________________________________________
-        Method	        |   Post                                       |
-      __________________________________________________________________
-        URL Params	|   --                                         |
-      __________________________________________________________________
-        Body Params	|   phone                                      |
-      __________________________________________________________________
-        Headers	 	|   Key                |           Value       |
-      __________________________________________________________________
-	                |X-Parse-Application-Id| shbjmmhfcp            |
-		        ________________________________________________
-	                | Content-Type	       |  application/json     |
-________________________________________________________________________
+ | API Title   | SendOTP                                                     |
+ |-------------|-------------------------------------------------------------|
+ | URL	       |  https://server.qik.ai/app/functions/SendOTP                |
+ | Method      | Post                                                        |
+ | URL Params  | --                                                          |
+ | Body Params | phone                                                       |
+ | Version     | 1.0                                                         |
+
+
+ | Headers Key            | Headers Value            |
+ |------------------------|--------------------------|
+ | X-Parse-Application-Id | shbjmmhfcp               |
+ | Content-Type           | application/json         |
+
  
   How to use
 •	Provide input parameter and you will get otp with saved hashcode of that elearning app
@@ -88,27 +85,24 @@ Result:-
 
 
 
-3.	sendsms
+      3.sendsms
 
 •	It is Post function for sending sms in response 
-__________________________________________________________________
-API Title	|   sendsms
-________________|__________________________________________________
-URL	        |   https://server.qik.ai/app/functions/sendsms
-________________|___________________________________________________
-Method	        |   Post
-________________|___________________________________________________
-URL Params	|   --
-________________|___________________________________________________
-Body Params	|  receiver, message
-________________|___________________________________________________
-Headers	 	|   Key                |           Value 
-________________|______________________|____________________________
-	        |X-Parse-Application-Id| shbjmmhfcp
-		____________________________________________________
-	        | Content-Type	       |  application/json
-________________|______________________|____________________________
  
+ | API Title   | sendsms                                                     |
+ |-------------|-------------------------------------------------------------|
+ | URL	       |  https://server.qik.ai/app/functions/sendsms                |
+ | Method      | Post                                                        |
+ | URL Params  | --                                                          |
+ | Body Params | receiver, message                                           |
+ | Version     | 1.0                                                         |
+
+
+ | Headers Key            | Headers Value            |
+ |------------------------|--------------------------|
+ | X-Parse-Application-Id | shbjmmhfcp               |
+ | Content-Type           | application/json         |
+
  
   How to use
 •	Provide input parameter and you will get 

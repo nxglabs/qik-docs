@@ -20,6 +20,7 @@ Document on Default functions
 
  
   How to use
+  
 •	Provide input parameter and you will get otp with saved hashcode of that package
 
 •	Example valid input request is as follows 
@@ -28,6 +29,7 @@ Document on Default functions
 
 
 Result:-
+
 1. In return of this function the otp will be return 
 
 1234
@@ -68,6 +70,7 @@ Result:-
 
  
   How to use
+  
 •	Provide input parameter and you will get otp with saved hashcode of that elearning app
 
 •	Example valid input request is as follows 
@@ -77,6 +80,7 @@ Result:-
 
 
 Result:-
+
 1. In return of this function the otp will be return 
 
 1234
@@ -119,6 +123,7 @@ You OTP is:1234 shZVjoAQhN2
 
  
   How to use
+  
 •	Provide input parameter and you will get 
 
 •	Example valid input request is as follows 
@@ -169,6 +174,7 @@ Abcd
 
 
 How to use
+
 •	Provide input parameter and you will get 
 
 •	Example valid input request is as follows 
@@ -178,6 +184,7 @@ How to use
 
 
 Result:-
+
 1. In return of this function the success will be return 
 
 [{"username":"9881680372",

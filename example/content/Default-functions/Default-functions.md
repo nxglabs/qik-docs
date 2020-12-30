@@ -43,7 +43,7 @@ Result:-
 
 
 
-         2.SendOTP
+       2.SendOTP
 
 •	It is Post function for getting otp in response 
 
@@ -86,7 +86,7 @@ Result:-
 
 
 
-      3.sendsms
+       3.sendsms
 
 •	It is Post function for sending sms in response 
  

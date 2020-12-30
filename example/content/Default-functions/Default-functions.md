@@ -126,20 +126,14 @@ Abcd
 
 
 
+
+
+
+
     4.Authentication
 
-•	It is Post function is for app site Authentication
+•It is Post function is for app site Authentication
 
-API Title	Authentication
-URL	https://server.qik.ai/app/functions/Authentication
- Method	Post
-URL Params	--
-Body Params	phone, installationid
-Headers	Key 	Value 
-	X-Parse-Application-Id	shbjmmhfcp
-	Content-Type	application/json
-Version	1.0
- 
   
  | API Title   | Authentication                                              |
  |-------------|-------------------------------------------------------------|
@@ -158,6 +152,7 @@ Version	1.0
 
 How to use
 •	Provide input parameter and you will get 
+
 •	Example valid input request is as follows 
       { " phone ":"9876543210",   " installationid ":"abcd"  }
 
@@ -165,13 +160,21 @@ How to use
 
 Result:-
 1. In return of this function the success will be return 
+
 [{"username":"9881680372",
+
 "phone":"9881680372",
+
 "createdAt":"2020-05-05T05:26:40.715Z",
+
 "updatedAt":"2020-12-30T10:37:26.086Z",
+
 "ACL":{"*":{"read":true},
+
 "vD0BCCZZVC":{"read":true,"write":true}},
+
 "sessionToken":"r:6bc860bf50e0243c944939c8ad115036",
+
 "objectId":"vD0BCCZZVC","__type":"Object","className":"_User"}] 
 
 

@@ -2,23 +2,21 @@ Document on Default functions
 1.	SendOTPv2
 
 •	It is Post function for getting otp in response 
- _______________________________________________________________________________
-        API Title	      |    SendOTPv2                                   |
-     ___________________________________________________________________________
-        URL	              |   https://server.qik.ai/app/functions/SendOTPv2|
-     ___________________________________________________________________________
-        Method	              |   Post                                         |
-     ___________________________________________________________________________
-        URL Params	      |    --                                          |
-     ___________________________________________________________________________
-        Body Params	      |   packageName, phone                           |
-     ___________________________________________________________________________
-        Headers	 	      |   Key                  |           Value       |
-     ___________________________________________________________________________
-	                      |X-Parse-Application-Id  | shbjmmhfcp            |		
-       _________________________________________________________________________
-	                      | Content-Type	       |  application/json     |
- _______________________________________________________________________________
+ 
+ | API Title   | SendOTPv2                                                   |
+ |-------------|-------------------------------------------------------------|
+ | URL	       |  https://server.qik.ai/app/functions/SendOTPv2              |
+ | Method      | Post                                                        |
+ | URL Params  | --                                                          |
+ | Body Params | packageName, phone                                          |
+ | Version     | 1.0                                                         |
+
+
+ | Headers Key            | Headers Value            |
+ |------------------------|--------------------------|
+ | X-Parse-Application-Id | shbjmmhfcp               |
+ | Content-Type           | application/json         |
+
  
   How to use
 •	Provide input parameter and you will get otp with saved hashcode of that package

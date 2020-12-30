@@ -89,6 +89,7 @@ Result:-
        3.sendsms
 
 •	It is Post function for sending sms in response 
+•       default account - livedrona and  sender - QikEln
  
  | API Title   | sendsms                                                     |
  |-------------|-------------------------------------------------------------|

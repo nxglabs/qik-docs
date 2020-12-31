@@ -246,3 +246,155 @@ Result:-
 }
 
 
+
+
+
+
+
+
+
+
+
+     6.	JoinMeeting
+
+
+• It is Post function is for joining video meeting/online meeting as attendent
+  
+| API Title   | JoinMeeting                                                  |
+ |-------------|-------------------------------------------------------------|
+ | URL	       |  https://server.qik.ai/app/functions/JoinMeeting            |
+ | Method      | Post                                                        |
+ | URL Params  | --                                                          |
+ | Body Params | meetingID, fullName                                         |
+ | Version     | 1.0                                                         |
+
+
+ | Headers Key            | Headers Value            |
+ |------------------------|--------------------------|
+ | X-Parse-Application-Id | shbjmmhfcp               |
+ | Content-Type           | application/json         |
+
+
+How to use
+
+   Provide input meetingID  from createMeeting response and fullName to join the meeting using this
+function
+	
+
+
+Result:-
+
+1. In return of this function the joining url will be return 
+
+{
+    "result": "https://live.qik.ai/bigbluebutton/api/join?meetingID=abcd&password=pa&fullName=abc&redirect=true&checksum=abc1234 "
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    7.	JoinAsModerator
+
+ •It is Post function is for joining video meeting/online meeting as Moderator
+  
+ | API Title   | JoinAsModerator                                             |
+ |-------------|-------------------------------------------------------------|
+ | URL	       |  https://server.qik.ai/app/functions/JoinAsModerator        |
+ | Method      | Post                                                        |
+ | URL Params  | --                                                          |
+ | Body Params | meetingID, fullName                                         |
+ | Version     | 1.0                                                         |
+
+
+ | Headers Key            | Headers Value            |
+ |------------------------|--------------------------|
+ | X-Parse-Application-Id | shbjmmhfcp               |
+ | Content-Type           | application/json         |
+
+
+How to use
+
+   Provide input meetingID  from createMeeting response and fullName to join the meeting using this
+function
+	
+
+
+Result:-
+
+1. In return of this function the joining url will be return
+
+{
+    "result": "https://live.qik.ai/bigbluebutton/api/join?meetingID=abcd&password=pa&fullName=abc&redirect=true&checksum=abc1234 "
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    8.	Auth
+
+•	It is Post function is for Authentication
+  
+ | API Title   | Auth                                                        |
+ |-------------|-------------------------------------------------------------|
+ | URL	       |  https://server.qik.ai/app/functions/Auth                   |
+ | Method      | Post                                                        |
+ | URL Params  | --                                                          |
+ | Body Params | phone                                                       |
+ | Version     | 1.0                                                         |
+
+
+ | Headers Key            | Headers Value            |
+ |------------------------|--------------------------|
+ | X-Parse-Application-Id | shbjmmhfcp               |
+ | Content-Type           | application/json         |
+
+
+How to use
+
+•	Provide input parameter and you will get 
+
+•	Example valid input request is as follows 
+
+      { " phone ":"9876543210 "  }
+
+
+
+Result:-
+
+1. In return of this function the success will be return 
+
+[{"username":"9881680372",
+"phone":"9881680372",
+"createdAt":"2020-05-05T05:26:40.715Z",
+"updatedAt":"2020-12-30T10:37:26.086Z",
+"ACL":{"*":{"read":true},
+"vD0BCCZZVC":{"read":true,"write":true}},
+"sessionToken":"r:6bc860bf50e0243c944939c8ad115036",
+"objectId":"vD0BCCZZVC","__type":"Object","className":"_User"}] 
+

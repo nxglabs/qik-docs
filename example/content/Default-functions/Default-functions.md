@@ -210,3 +210,39 @@ Result:-
 
 
 
+
+     5.	 createMeeting
+
+•	It is Post function is for creating video meeting/online meeting
+
+  
+ | API Title   | createMeeting                                               |
+ |-------------|-------------------------------------------------------------|
+ | URL	       |  https://server.qik.ai/app/functions/createMeeting          |
+ | Method      | Post                                                        |
+ | URL Params  | --                                                          |
+ | Body Params | --                                                          |
+ | Version     | 1.0                                                         |
+
+
+ | Headers Key            | Headers Value            |
+ |------------------------|--------------------------|
+ | X-Parse-Application-Id | shbjmmhfcp               |
+ | Content-Type           | application/json         |
+
+
+ How to use
+
+•	Provide input headers and call the function
+	
+
+
+ Result:-
+
+1. In return of this function the success will be return 
+
+{
+    "result": "<response>\r\n<returncode>SUCCESS</returncode>\r\n<meetingID>random-8019801</meetingID>\r\n<internalMeetingID>a3441e5321f000e9530aca2840c55e2261aae8f3-1609396937141</internalMeetingID>\r\n<parentMeetingID>bbb-none</parentMeetingID>\r\n<attendeePW>ap</attendeePW>\r\n<moderatorPW>mp</moderatorPW>\r\n<createTime>1609396937141</createTime>\r\n<voiceBridge>05370</voiceBridge>\r\n<dialNumber>613-555-1234</dialNumber>\r\n<createDate>Thu Dec 31 00:42:17 CST 2020</createDate>\r\n<hasUserJoined>false</hasUserJoined>\r\n<duration>0</duration>\r\n<hasBeenForciblyEnded>false</hasBeenForciblyEnded>\r\n<messageKey></messageKey>\r\n<message></message>\r\n</response>"
+}
+
+

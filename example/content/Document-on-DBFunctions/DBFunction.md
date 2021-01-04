@@ -1,4 +1,4 @@
-Document on DBFunctions working
+     Document on DBFunctions working
      
 •	Dbfunctions or custom function we write in code editor of elearing app or in other code editor of apps of appcreator are saved In w_DBFunctions class
 

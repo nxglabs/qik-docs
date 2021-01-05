@@ -1,5 +1,5 @@
          Document on VimeoGetFormats
-
+.
      Introduction
 •	The video is uploaded to vim account from after save function of elearning_Videos class and the videoed is saved in videourl field of elearning_Videos class which then replaced with formatted URL using checkM3u8 job and this job call VimeoGetFormats to get video formated
 
@@ -71,9 +71,9 @@ elearning_Videos class
 
 •	Example valid input request is as follows 
 
-      {"playurl":"https://player.vimeo.com/external/447767272.sd.mp4?s=a44785965de5c1517a8df9075f6e324a88160bca&profile_id=165&oauth2_token_id=1378826644 "   }
+   {"playurl":"https://player.vimeo.com/external/447767272.sd.mp4?s=a44785965de5c1517a8df9075f6e324a88160bca&profile_id=165&oauth2_token_id=1378826644 "   }
 
-
+'
     Result:-
  
 

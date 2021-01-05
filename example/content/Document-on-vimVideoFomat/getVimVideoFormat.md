@@ -1,6 +1,7 @@
          Document on VimeoGetFormats
 .
      Introduction
+     
 •	The video is uploaded to vim account from after save function of elearning_Videos class and the videoed is saved in videourl field of elearning_Videos class which then replaced with formatted URL using checkM3u8 job and this job call VimeoGetFormats to get video formated
 
 •	Some time according to video size it takes time to convert video in formats 

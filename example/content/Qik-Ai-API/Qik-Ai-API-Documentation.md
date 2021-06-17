@@ -582,7 +582,7 @@ The field type should be “Number”
  | URL	   | https://server.qik.ai/app/functions/intIncrement              |
  | Method      | Post                                                          |
  | URL Params  | --                                                            |
- | Body Params | className, fieldName                                          |
+ | Body Params | className, fieldName, query                                   |
  | Version     | 1.0                                                           |
 
 
@@ -601,7 +601,8 @@ Example valid input request is as follows
 
         {  
              "className": "careerhub_TblEmplyeeId", 
-             "fieldName": "EmpId"
+             "fieldName": "EmpId",
+	     "query":"where={"CreatedBy": {"__type": "Pointer","className":"_User","objectId": "ixsiE4sfHH"}}"
          }
 
 Result:-

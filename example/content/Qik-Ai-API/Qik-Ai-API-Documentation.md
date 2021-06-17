@@ -572,8 +572,9 @@ Result:-
 Introduction
 
 The intIncrement API is use for auto-increment value of given field of the given class
-
+and we can increment value condition wise by giving condition in query parameter
 The field type should be “Number”
+ 
 
 
 

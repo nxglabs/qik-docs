@@ -398,3 +398,52 @@ Result:-
 "sessionToken":"r:6bc860bf50e0243c944939c8ad115036",
 "objectId":"vD0BCCZZVC","__type":"Object","className":"_User"}] 
 
+
+
+
+
+
+
+    9.	APPActivation function
+
+Introduction
+
+
+•	APPActivation is used to activate app add default data in default classes in that app
+
+•	and insert the userid in extended user class
+ 
+
+ 
+ | API Title   | DeleteSchemas                                                |
+ |-------------|--------------------------------------------------------------|
+ | URL	       | https://server.qik.ai/app/functions/APPActivation            |
+ | Method      | Post                                                         |
+ | URL Params  | --                                                           |
+ | Body Params | TenantId,AppId,UserId,IsActive                               |
+ | Version     | 1.0                                                          |
+
+
+ | Headers Key            | Headers Value            |
+ |------------------------|--------------------------|
+ | X-Parse-Application-Id | shbjmmhfcp               |
+ | X-Parse-Session-Token  | sessiontoekn             |
+ 
+
+
+
+    How to use
+
+•	Example valid input request is as follows, must change parameter with real one
+
+      {"TenantId":{ "__type": "Pointer", "className": "partners_Tenant", "objectId": "t19E2tYzVv" },
+       "AppId":{ "__type": "Pointer", "className": "w_appinfo", "objectId": "9iLy7VWpmp" },
+       "UserId":{ "__type": "Pointer", "className": "_User", "objectId": "apusKvAbBQ" },
+       "IsActive":true}
+
+.    
+
+
+    Result:-
+ 
+ {"result":"success"}

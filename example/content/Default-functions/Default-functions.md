@@ -411,7 +411,7 @@ Introduction
 
 •	APPActivation is used to activate app add default data in default classes in that app
 
-•	and insert the userid in extended user class
+•	and insert the userid in extended user class and entry in Activation class of partners app
  
 
  

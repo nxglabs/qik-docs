@@ -107,13 +107,13 @@ You OTP is:1234 shZVjoAQhN2
 
 •       default account - livedrona and  sender - QikEln
  
- | API Title   | sendsms                                                     |
- |-------------|-------------------------------------------------------------|
- | URL	       |  https://server.qik.ai/app/functions/sendsms                |
- | Method      | Post                                                        |
- | URL Params  | --                                                          |
- | Body Params | receiver, message                                           |
- | Version     | 1.0                                                         |
+ | API Title   | sendsms                                                             |
+ |-------------|---------------------------------------------------------------------|
+ | URL	       |  https://server.qik.ai/app/functions/sendsms                        |
+ | Method      | Post                                                                |
+ | URL Params  | --                                                                  |
+ | Body Params | receiver, message, templateId, TenantId OR CreatedBy, extendedClass |
+ | Version     | 1.0                                                                 |
 
 
  | Headers Key            | Headers Value            |
@@ -128,7 +128,16 @@ You OTP is:1234 shZVjoAQhN2
 
 •	Example valid input request is as follows 
 
-      { " receiver ":"9876543210",   "message":"abcd"  }
+      { "receiver":"9876543210",  
+        "message":"abcd" ,
+	"templateId": "xyz", 
+	"TenantId":{TenantId pointer}}
+	OR
+	{ "receiver":"9876543210",  
+        "message":"abcd" ,
+	"templateId": "xyz", 
+	"CreatedBy":{CreatedBy pointer},
+	"extendedClass":"extendedClass"}
 
 
 
@@ -153,7 +162,77 @@ Abcd
 
 
 
-       4.Authentication
+       4.SendEmails
+
+•	It is Post function for sending mails in response 
+
+•       default account - mailer@nxglabs.in
+ 
+ | API Title   | SendEmails                                                          |
+ |-------------|---------------------------------------------------------------------|
+ | URL	       |  https://server.qik.ai/app/functions/SendEmails                     |
+ | Method      | Post                                                                |
+ | URL Params  | --                                                                  |
+ | Body Params | Emails, Subject, Emailbody, user, pass,                             |
+ |             | TenantId OR CreatedBy, extendedClass                                |  
+ | Version     | 1.0                                                                 |
+
+
+ | Headers Key            | Headers Value            |
+ |------------------------|--------------------------|
+ | X-Parse-Application-Id | shbjmmhfcp               |
+ | Content-Type           | application/json         |
+
+ 
+  How to use
+  
+•	Provide input parameter and you will get 
+
+•	Example valid input request is as follows 
+
+      { "Emails":"EmailID",
+        "Subject":"Subject",
+        "Emailbody":"abcd" ,
+	"user": "xyz",
+	"pass":"pass",
+	"TenantId":{TenantId pointer}}
+	OR
+	{ "Emails":"EmailID",
+        "Subject":"Subject",
+        "Emailbody":"abcd" ,
+	"user": "xyz",
+	"pass":"pass",
+	"CreatedBy":{CreatedBy pointer},
+	"extendedClass":"extendedClass"}
+
+
+
+Result:-
+
+1. In return of this function the success will be return 
+
+{"result":"success"}
+
+2. The mail will be received on given Email Id
+
+Abcd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       5.Authentication
 
 •It is Post function is for app site Authentication
 
@@ -211,7 +290,7 @@ Result:-
 
 
 
-     5.	 createMeeting
+     6.	 createMeeting
 
 •	It is Post function is for creating video meeting/online meeting
 
@@ -255,7 +334,7 @@ Result:-
 
 
 
-     6.	JoinMeeting
+     7.	JoinMeeting
 
 
 • It is Post function is for joining video meeting/online meeting as attendent
@@ -305,7 +384,7 @@ Result:-
 
 
 
-    7.	JoinAsModerator
+    8.	JoinAsModerator
 
  •It is Post function is for joining video meeting/online meeting as Moderator
   
@@ -356,7 +435,7 @@ Result:-
 
 
 
-    8.	Auth
+    9.	Auth
 
 •	It is Post function is for Authentication
   
@@ -404,7 +483,7 @@ Result:-
 
 
 
-    9.	APPActivation function
+    10.	APPActivation function
 
 Introduction
 

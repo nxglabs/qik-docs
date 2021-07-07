@@ -620,55 +620,10 @@ Result:-
 
 
 
-13.   SendSms
-Introduction
- The SendSms API is use for sending sms to the mobile numbers given in the object which format is fix and specified as follows
-
-API Title
-SendSms
-URL
-https://uat-server.qik.ai/app/functions/SendSms
- Method
-Post
-URL Params
---
-Body Params
-object
-Headers
-Key
-Value
-X-Parse-Application-Id
-shbjmmhfcp
-Content-Type
-application/json
-Version
-1.2
-
-How to use
-
-Provide input parameter “object” in which given “data” array contains the object of users or clients where there mobile no. are present specified as follows 
-Example valid input request is as follows
-{"object":{
- "template_name": "Student SMS",
- "no_field": "Mobile_No",
- "message": "Message Body",
- "data": [ 
-{
-     "objectId": "ediuehde",
-     "name": "ABC",
-     "Mobile_No": "9881680382"
-   },   
-{
-     "objectId": "ediuehde",
-     "name": "ABC",
-     "Mobile_No": "7020129379"
-   } ]
-}}
-Result:-
 
 
 
-        14.   image_upload
+        13.   image_upload
 
 Introduction
 

@@ -668,19 +668,19 @@ Result:-
 
 
 
-        14.   DBFunction
+        14.   image_upload
 
 Introduction
 
- The DBFunction API is used to declare the specified function
+ The image_upload API is used to upload image
 
 
  | API Title   | DBFunction                                                    |
  |-------------|-------------------------------------------------------------- |
- | URL	   | https://server.qik.ai/app/functions/DBFunction                |
+ | URL	   | https://server.qik.ai/image_upload                           |
  | Method      | Post                                                          |
  | URL Params  | --                                                            |
- | Body Params | functionName                                                  |
+ | Body Params | file (form-data input parameter)                              |
  | Version     | 1.0                                                           |
 
 
@@ -691,19 +691,19 @@ Introduction
 
 How to use
 
-Provide input parameter “functionName” which” need to be declared and then call the function individually 
+Provide input parameter “file” which need to provide the uploaded file, ima, doc etc
 
 Example valid input request is as follows
 
 {
-"functionName":"helloWorld"
+"file":"filepath"
 }
 
 
 Result:-
 
+file will be uploaded aws s3 bucket and in return will recive url
 
-
-Then call the function individually as follows
+{ "status":"Success" ,"imageUrl": "fileurl" }
 
 

@@ -532,3 +532,65 @@ Introduction
     Result:-
  
  {"result":"success"}
+ 
+ 
+.
+
+
+   11.	getdistinct
+
+
+Introduction
+
+•	The getdistinct is created for frontend
+
+•	The getdistinct is use to give condition result like aggregate and distinct queries for the given className
+
+•	To use this API appeditor role is not compulsory if the user has read permissions for the requested className
+
+•	This API is also use for group by conditions 
+
+
+
+ | API Title   | UniqueQuery                                                  |
+ |-------------|--------------------------------------------------------------|
+ | URL	    | https://server.qik.ai/app/functions/getdistinct              |
+ | Method      | Post                                                         |
+ | URL Params  | --                                                           |
+ | Body Params | Condition, className                                         |
+ | Version     | 1.0                                                          |
+
+
+ | Headers Key            | Headers Value            |
+ |------------------------|--------------------------|
+ | X-Parse-Application-Id | shbjmmhfcp               |
+ | Content-Type           | application/json         |
+ | sessionToken           | sessionToken             |
+
+
+
+
+   How to use
+
+•	Provide input parameter “condition” and “className” to get the required result 
+
+•	 Example valid input request is as follows
+
+      {  "condition":"distinct=name", 
+         "className":"City"  }
+
+.
+    Result:-
+      {"result":[required response]}
+
+
+•	Example valid input request for group conditions as follows
+
+        {
+	     "condition":"group={'objectId':'$employee_id','total':{'$sum':'$calculation_details'}}",
+	      "className":"uat_ExpenseDetails"
+       }
+.
+
+     Result:-
+       {"result":[required response]}

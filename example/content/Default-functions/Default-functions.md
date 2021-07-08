@@ -537,7 +537,7 @@ Introduction
 .
 
 
-   11.	getdistinct
+    11.	getdistinct
 
 
 Introduction
@@ -552,7 +552,7 @@ Introduction
 
 
 
- | API Title   | UniqueQuery                                                  |
+ | API Title   | getdistinct                                                  |
  |-------------|--------------------------------------------------------------|
  | URL	    | https://server.qik.ai/app/functions/getdistinct              |
  | Method      | Post                                                         |
@@ -580,8 +580,8 @@ Introduction
          "className":"City"  }
 
 .
-    Result:-
-      {"result":[required response]}
+     Result:-
+       {"result":[required response]}
 
 
 •	Example valid input request for group conditions as follows

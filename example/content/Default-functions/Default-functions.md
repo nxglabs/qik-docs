@@ -594,3 +594,65 @@ Introduction
 
      Result:-
        {"result":[required response]}
+
+.
+
+
+
+
+
+     12.SendOTPV3
+
+•	It is Post function for getting otp in response,it can be used on app side or frontend
+
+•	It need some extra input parameter to calculate the number of sms  
+ 
+ | API Title   | SendOTPv2                                                   |
+ |-------------|-------------------------------------------------------------|
+ | URL	       |  https://server.qik.ai/app/functions/SendOTPV3              |
+ | Method      | Post                                                        |
+ | URL Params  | --                                                          |
+ | Body Params | phone, packageName or appId, UserId                         |
+ | Version     | 1.0                                                         |
+
+
+ | Headers Key            | Headers Value            |
+ |------------------------|--------------------------|
+ | X-Parse-Application-Id | shbjmmhfcp               |
+ | Content-Type           | application/json         |
+
+ 
+  How to use
+  
+•	Provide input parameter and you will get otp with saved hashcode of that package
+
+•	Example valid input request is as follows for app side 
+
+      {"packageName ":"test", "phone ":"9876543210" }
+      
+•	Example valid input request is as follows for app side 
+
+     { "phone":"98816789382",
+    "appId":{ "__type": "Pointer", "className": "w_appinfo", "objectId": "objid" },
+    "UserId":{ "__type": "Pointer", "className": "_User", "objectId": "objid" }}
+
+
+Result:-
+
+1. In return of this function the otp will be return 
+
+{
+    "result": 4256
+}
+
+2. This message will be received on given phone number 
+
+      for appsite
+
+     <#> You OTP is:1234 abc -QikEln
+     
+     
+      for frontend
+
+     <#> You OTP is:1234 -QikEln
+     

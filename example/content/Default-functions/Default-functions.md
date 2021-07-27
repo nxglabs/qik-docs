@@ -97,6 +97,54 @@ You OTP is:1234 shZVjoAQhN2
 
 
 
+      1.SendOTPV3
+
+•	It is Post function for app side for getting otp in response it will be use for both app site and front end 
+        but it need parameter to count sms by tenant  
+ 
+ | API Title   | SendOTPV3                                                   |
+ |-------------|-------------------------------------------------------------|
+ | URL	       |  https://server.qik.ai/app/functions/SendOTPV3              |
+ | Method      | Post                                                        |
+ | URL Params  | --                                                          |
+ | Body Params | packageName, phone or phone, appId, UserId                  |
+ | Version     | 1.0                                                         |
+
+
+ | Headers Key            | Headers Value            |
+ |------------------------|--------------------------|
+ | X-Parse-Application-Id | shbjmmhfcp               |
+ | Content-Type           | application/json         |
+
+ 
+  How to use
+  
+•	Provide input parameter and you will get otp with saved hashcode of that package
+        here appid is current app's and userId is the user present in extended class to get 
+	tenantId
+
+•	Example valid input request is as follows 
+
+      {"packageName ":"test", "phone ":"9876543210",     }
+      or
+       {"appId":{w_appinfo pointer}}, "phone ":"9876543210", UserId:{user pointer}    }
+
+
+Result:-
+
+1. In return of this function the otp will be return 
+
+1234
+
+2. This message will be received on given phone number 
+
+     You OTP is:1234 abc
+
+
+
+
+
+
 
 
 

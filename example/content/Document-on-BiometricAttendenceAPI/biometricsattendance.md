@@ -5,7 +5,7 @@
 •	The attendence is marked by biometric machine and uploaded attendance by API in Biometrics_MachineConfig class
          for that we need to add domain in biometric machine e.g. server.qik.ai
          
-•	In Biometrics_MachineConfig class we need to add configration details as given below
+•	In Biometrics_MachineConfig class we need to add configration details as given below.
 .
 .
          1)Targetclass        :- the class of the application where biometric attendance will be saved

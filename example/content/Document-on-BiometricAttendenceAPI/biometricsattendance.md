@@ -57,8 +57,8 @@
                           var minutes = t[1];
 
 
-                         //--find EmpId from careerhub_BioAttendanceEntry
-                        const BioAttendanceEntry = new Parse.Query("careerhub_BioAttendanceEntry");
+                         //--find employeeId or studentId from target class
+                        const BioAttendanceEntry = new Parse.Query("targetclass");
                         const BioAttendanceEntryRes = await BioAttendanceEntry.get(currentid, { useMasterKey: true });
                         if (BioAttendanceEntryRes.length !== 0) {
                             var EmpId = BioAttendanceEntryRes.get("EmpId");
@@ -74,22 +74,22 @@
                                  Date.UTC(d.getFullYear(), d.getMonth(), d.getDate(), 23, 59, 59)
                              );
 
-                             //--check for entry in today in careerhub_FacultyAttendance  
+                             //--check for entry in today in targetclass  
                              const pipeline = [
                                    { match: { BranchId: Branch, EmpId: empid, Date: { $gte: formD, $lt: ToD } } },
                                    { project: { objectId: 1, InTime: 1 } }
                                ]
                                console.log(JSON.stringify(pipeline));
 
-                               const FacultyAttquery = new Parse.Query("careerhub_FacultyAttendance");
-                               var FacultyAttresults = await FacultyAttquery.aggregate(pipeline, { useMasterKey: true })
-                                   console.log("FacultyAttresults");
-                                 if (FacultyAttresults.length !== 0) {
-                                      console.log(JSON.stringify(FacultyAttresults[0]));
-                                       var FacultyAtId
-                                       FacultyAtId = FacultyAttresults[0].objectId;
+                               const Attquery = new Parse.Query("targetclass");
+                               var Attresults = await Attquery.aggregate(pipeline, { useMasterKey: true })
+                                   console.log("Attresults");
+                                 if (Attresults.length !== 0) {
+                                      console.log(JSON.stringify(Attresults[0]));
+                                       var AtId
+                                       AtId = Attresults[0].objectId;
                                        var presentInTime
-                                       presentInTime = FacultyAttresults[0].InTime;
+                                       presentInTime = Attresults[0].InTime;
                                        var OutTime = formattedTime;
 
 
@@ -99,68 +99,68 @@
                                        var currentTime = hours + "." + minutes;
                                        console.log(currentTime);
 
-                                       //-- get input time
-                    var time = presentInTime.split(":");
-                    var hour = time[0];
-                    if (hour == '00') { hour = 24 }
-                    var min = time[1];
+                                     //-- get input time
+                                    var time = presentInTime.split(":");
+                                    var hour = time[0];
+                                    if (hour == '00') { hour = 24 }
+                                    var min = time[1];
 
-                    var inputTime = hour + "." + min;
-                    console.log(inputTime);
+                                    var inputTime = hour + "." + min;
+                                    console.log(inputTime);
 
-                    var totalTime = currentTime - inputTime;
+                                     var totalTime = currentTime - inputTime;
 
-                    totalTime = totalTime.toFixed(2);
-                    totalTime = (Math.abs(totalTime));
-                    var TotalHours = Number(totalTime);
-                    console.log("TotalHours");
-                    console.log(TotalHours);
+                                      totalTime = totalTime.toFixed(2);
+                                      totalTime = (Math.abs(totalTime));
+                                      var TotalHours = Number(totalTime);
+                                      console.log("TotalHours");
+                                      console.log(TotalHours);
 
-                    var WorkingStatus
-                    if (TotalHours < 4) {
+                                      var WorkingStatus
+                                       if (TotalHours < 4) {
 
-                        WorkingStatus = "Absent"
+                                          WorkingStatus = "Absent"
 
-                    } else if (TotalHours >= 4 && TotalHours < 8) {
+                                         } else if (TotalHours >= 4 && TotalHours < 8) {
 
-                        WorkingStatus = "HalfDay"
+                                           WorkingStatus = "HalfDay"
 
-                    } else if (TotalHours >= 8) {
+                                         } else if (TotalHours >= 8) {
 
-                        WorkingStatus = "FullDay"
-                    }
+                                           WorkingStatus = "FullDay"
+                                        }
 
 
-                    //--update careerhub_FacultyAttendance for out time in that day
-                    var FacultyAtIdclass = Parse.Object.extend("careerhub_FacultyAttendance");
-                    var FacultyAtIdclassquery = new Parse.Query(FacultyAtIdclass);
-                    await FacultyAtIdclassquery.get(FacultyAtId, { useMasterKey: true }).then((object) => {
-                        object.set("OutTime", OutTime);
-                        object.set("TotalHours", TotalHours);
-                        object.set("WorkingStatus", WorkingStatus)
-                        object.save(null, { useMasterKey: true }).then((response) => {
-                            console.log('careerhub_FacultyAttendance Updated object');
-                        }, (error) => {
-                            console.error('Error while updating careerhub_FacultyAttendance object', error);
-                            //return Promise.reject("Error:Result not found");
-                        });
-                    });
-                } else {
+                                  //--update targetclass for out time in that day
+                                  var AtIdclass = Parse.Object.extend("targetclass");
+                                  var AtIdclassquery = new Parse.Query(AtIdclass);
+                                   await AtIdclassquery.get(AtId, { useMasterKey: true }).then((object) => {
+                                   object.set("OutTime", OutTime);
+                                   object.set("TotalHours", TotalHours);
+                                   object.set("WorkingStatus", WorkingStatus)
+                                   object.save(null, { useMasterKey: true }).then((response) => {
+                                         console.log('targetclass Updated object');
+                                   }, (error) => {
+                                      console.error('Error while updating targetclass object', error);
+                                      //return Promise.reject("Error:Result not found");
+                                 });
+                           });
+                    } else {
 
-                    //-- save InTime to careerhub_FacultyAttendance
-                    var FacultyAttendance = Parse.Object.extend("careerhub_FacultyAttendance");
-                    var FacultyAttendancequery = new FacultyAttendance();
-                    FacultyAttendancequery.set("BranchId", BranchId);
-                    FacultyAttendancequery.set("EmpId", EmpId);
-                    FacultyAttendancequery.set("Date", d);
-                    FacultyAttendancequery.set("InTime", formattedTime);
-                    FacultyAttendancequery.set("WorkingStatus", "logIn")
-                    await FacultyAttendancequery.save(null, { useMasterKey: true }).then(
+                    //-- save InTime to targetclass
+                    var Attendance = Parse.Object.extend("targetclass");
+                    var Attendancequery = new Attendance();
+                    Attendancequery.set("BranchId", BranchId);
+                    Attendancequery.set("EmpId", EmpId);
+                    Attendancequery.set("Date", d);
+                    Attendancequery.set("InTime", formattedTime);
+                    Attendancequery.set("WorkingStatus", "logIn")
+                    await Attendancequery.save(null, { useMasterKey: true }).then(
                         (result) => {
-                            console.log('careerhub_FacultyAttendance Object created');
+                            console.log('targetclass Object created');
                         },
                         (err) => {
-                            console.log('Error while creating careerhub_FacultyAttendance Object: ')
+                            console.log('Error while creating targetclass Object: ')
                             console.log(err);
                         });
                       }
@@ -168,7 +168,8 @@
                   }
                   }
          
-         
+.
+
 
      How to use
 

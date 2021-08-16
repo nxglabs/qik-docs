@@ -418,9 +418,10 @@ Result:-
 
 Introduction
 
-•	The ApplistAPI is use to add the user or attach the user to given role
+•	The ApplistAPI is use to give app list of current organisation to which current user has 
+        access 
 
-•	To use this API appeditor role is not compulsory 
+•	To use this API appeditor role is compulsory 
 
 
  | API Title   | Applist                                                       |
@@ -428,7 +429,7 @@ Introduction
  | URL	   | https://server.qik.ai/app/functions/Applist                   |
  | Method      | Post                                                          |
  | URL Params  | --                                                            |
- | Body Params | --                                                            |
+ | Body Params | orgname                                                       |
  | Version     | 1.0                                                           |
 
 
@@ -440,7 +441,11 @@ Introduction
 
       How to use
 
-•	Provide header parameter “sessionToken” and app list of that  user will be given as a result  
+•	Provide header parameter “sessionToken” and app list of that user will be given as a result  
+        and orgname as body parameter
+	{
+	"orgname" : "organisationName"
+	}
 
 
       Result:-
@@ -607,8 +612,8 @@ Example valid input request is as follows
          }
 
 Result:-
-
-
+(at place of one there would be incremented value)
+{result: 1 }
 
 
 
@@ -660,5 +665,126 @@ Result:-
 file will be uploaded aws s3 bucket and in return will recive url
 
 { "status":"Success" ,"imageUrl": "fileurl" }
+
+.
+
+
+
+
+
+
+
+
+
+
+
+
+         14.   BulkUpdateACL
+
+Introduction
+
+
+ The BulkUpdateACL API is use to Bulk update ACL of the given className
+
+
+
+ | API Title   | BulkUpdateACL                                                 |
+ |-------------|-------------------------------------------------------------- |
+ | URL	   | https://server.qik.ai/app/jobs/BulkUpdateACL                    |
+ | Method      | Post                                                          |
+ | URL Params  | --                                                            |
+ | Body Params | className, ACLs                                               |
+ | Version     | 1.0                                                           |
+
+
+ | Headers Key            | Headers Value            |
+ |------------------------|--------------------------|
+ | X-Parse-Application-Id | shbjmmhfcp               |
+ |X-Parse-Master-Key      | masterkey                |
+ | Content-Type           | application/json         |
+
+
+
+How to use
+
+Provide input parameter “className” in which given “ACLs” need to be updated
+in ACL ID's value need to be userid and value of rolename must be role which
+need to be authorized
+
+Example valid input request is as follows
+
+        {  
+             "className": "carhub_TblEmplyeeId", 
+             "ACLs": {
+
+                 All:{"read":true,"write":true},
+                 UserID:{"ID":"xyz","read":true,"write":true},
+                 role :{rolename:"abc_asd","read":true,"write":true}
+
+                 }
+         }
+
+Result:-
+
+.
+
+
+
+
+
+
+
+
+
+
+
+         15.   BulkUpdate
+
+Introduction
+
+The BulkUpdae API is use to Bulk update FieldValue of given FieldName 
+of the given className
+ 
+
+
+
+ | API Title   | intIncrement                                                  |
+ |-------------|-------------------------------------------------------------- |
+ | URL	   | https://server.qik.ai/app/jobs/BulkUpdate                     |
+ | Method      | Post                                                          |
+ | URL Params  | --                                                            |
+ | Body Params | className, FieldName, FieldValue                              |
+ | Version     | 1.0                                                           |
+
+
+ | Headers Key            | Headers Value            |
+ |------------------------|--------------------------|
+ | X-Parse-Application-Id | shbjmmhfcp               |
+ |X-Parse-Master-Key      | masterkey                |
+ | Content-Type           | application/json         |
+
+
+
+How to use
+
+Provide input parameter “className” the class in which given “FieldName” the field 
+need to be updated with the given “FieldValue” 
+
+Example valid input request is as follows
+
+        {  
+             "className": "careerhub_TblEmplyeeId", 
+             "FieldName": "EmpId",
+	     "FieldValue":"001"
+         }
+
+Result:-
+
+
+
+
+
+
+
 
 

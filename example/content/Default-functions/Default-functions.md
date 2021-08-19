@@ -104,7 +104,7 @@ Result:-
 
 
 
-       3.SendOTPV3
+        3.SendOTPV3
 
 •	It is Post function for getting otp in response,it can be used on app side or frontend
 

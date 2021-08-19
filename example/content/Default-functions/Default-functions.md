@@ -128,6 +128,8 @@ Result:-
   How to use
   
 •	Provide input parameter and you will get otp with saved hashcode of that package
+        packageName parameter is provided to get hashcode from elearning_BuildConfig class
+	which is used to autoread otp in app  
 
 •	Example valid input request is as follows for app side 
 
@@ -255,7 +257,8 @@ Result:-
  
   How to use
   
-•	Provide input parameter and you will get 
+•	Provide input parameter and you will get emails sent if multiple sms needed
+        send array of emailids,asvalue of "Emails" parameter 
 
 •	Example valid input request is as follows 
 
@@ -559,23 +562,24 @@ Introduction
 
 
 •	APPActivation is used to activate app add default data in default classes in that app
+	and insert the userid in extended user class and entry in Activation class of partners app
 
-•	and insert the userid in extended user class and entry in Activation class of partners app
-
-•	if the user or admin don't have subscription for the given app then it will return err msg
+•	if the user or admin (means the tenant user from partners class) don't have subscription 
+        for the given app then it will return err msg
 
 •	if the user is admin then the function will be done automaticaly else it will return err msg 
 
 •	if the user is not admin then with other details admin email input will be needed
- 
+
+
 
  
- | API Title   | DeleteSchemas                                                |
+ | API Title   | APPActivation                                                |
  |-------------|--------------------------------------------------------------|
  | URL	       | https://server.qik.ai/app/functions/APPActivation            |
  | Method      | Post                                                         |
  | URL Params  | --                                                           |
- | Body Params | AppId,UserId,AdminEmail(optional)                   |
+ | Body Params | AppId,UserId,AdminEmail(optional)                    |
  | Version     | 1.0                                                          |
 
 

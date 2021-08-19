@@ -104,7 +104,7 @@ Result:-
 
 
 
-      3.SendOTPV3
+       3.SendOTPV3
 
 •	It is Post function for getting otp in response,it can be used on app side or frontend
 
@@ -170,7 +170,7 @@ Result:-
 
 
 
-       3.sendsms
+       4.sendsms
 
 •	It is Post function for sending sms in response 
 
@@ -231,7 +231,7 @@ Abcd
 
 
 
-       4.SendEmails
+       5.SendEmails
 
 •	It is Post function for sending mails in response 
 
@@ -301,7 +301,7 @@ Abcd
 
 
 
-       5.Authentication(unsecure)
+       6.Authentication(unsecure)
 
 •It is Post function is for app site Authentication or login 
 
@@ -359,7 +359,7 @@ Result:-
 
 
 
-     6.	 createMeeting
+     7.	 createMeeting
 
 •	It is Post function is for creating video meeting/online meeting it's created
         using big blue buttton apis
@@ -404,7 +404,7 @@ Result:-
 
 
 
-     7.	JoinMeeting
+     8.	JoinMeeting
 
 
 • It is Post function is for joining video meeting/online meeting as attendent
@@ -454,7 +454,7 @@ Result:-
 
 
 
-    8.	JoinAsModerator
+    9.	JoinAsModerator
 
  •It is Post function is for joining video meeting/online meeting as Moderator
   
@@ -505,7 +505,7 @@ Result:-
 
 
 
-    9.	Auth
+    10.	Auth(unsecure)
 
 •	It is Post function is for Authentication or login in frantend
   
@@ -553,7 +553,7 @@ Result:-
 
 
 
-    10.	APPActivation function
+    11.	APPActivation function
 
 Introduction
 
@@ -607,7 +607,7 @@ Introduction
 .
 
 
-    11.	getdistinct
+    12.	getdistinct
 
 
 Introduction

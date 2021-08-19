@@ -1,6 +1,61 @@
-Document on Default functions
+     Document on Default functions
 
-       1.SendOTPv2
+   Default functions are the set of helper function and they are created in defaultdata app and can be used in other apps
+
+
+
+
+
+       1.SendOTP
+
+•	It is Post function for getting otp in response for front end 
+
+ | API Title   | SendOTP                                                     |
+ |-------------|-------------------------------------------------------------|
+ | URL	       |  https://server.qik.ai/app/functions/SendOTP                |
+ | Method      | Post                                                        |
+ | URL Params  | --                                                          |
+ | Body Params | phone                                                       |
+ | Version     | 1.0                                                         |
+
+
+ | Headers Key            | Headers Value            |
+ |------------------------|--------------------------|
+ | X-Parse-Application-Id | shbjmmhfcp               |
+ | Content-Type           | application/json         |
+
+ 
+  How to use
+  
+•	Provide input parameter and you will get otp with saved hashcode of that elearning app
+
+•	Example valid input request is as follows 
+
+      { "phone ":"9876543210" }
+
+
+
+Result:-
+
+1. In return of this function the otp will be return 
+
+1234
+
+2. This message will be received on given phone number
+
+You OTP is:1234 shZVjoAQhN2
+
+
+
+
+
+
+
+
+
+
+
+       2.SendOTPv2
 
 •	It is Post function for app side for getting otp in response 
  
@@ -45,69 +100,22 @@ Result:-
 
 
 
-
-
-
-
-
-       2.SendOTP
-
-•	It is Post function for getting otp in response 
-
- | API Title   | SendOTP                                                     |
- |-------------|-------------------------------------------------------------|
- | URL	       |  https://server.qik.ai/app/functions/SendOTP                |
- | Method      | Post                                                        |
- | URL Params  | --                                                          |
- | Body Params | phone                                                       |
- | Version     | 1.0                                                         |
-
-
- | Headers Key            | Headers Value            |
- |------------------------|--------------------------|
- | X-Parse-Application-Id | shbjmmhfcp               |
- | Content-Type           | application/json         |
-
- 
-  How to use
-  
-•	Provide input parameter and you will get otp with saved hashcode of that elearning app
-
-•	Example valid input request is as follows 
-
-      { "phone ":"9876543210" }
-
-
-
-Result:-
-
-1. In return of this function the otp will be return 
-
-1234
-
-2. This message will be received on given phone number
-
-You OTP is:1234 shZVjoAQhN2
-
-
-
-
-
 	
 
 
 
-      1.SendOTPV3
+      3.SendOTPV3
 
-•	It is Post function for app side for getting otp in response it will be use for both app site and front end 
-        but it need parameter to count sms by tenant  
+•	It is Post function for getting otp in response,it can be used on app side or frontend
+
+•	It need some extra input parameter to calculate the number of sms  
  
- | API Title   | SendOTPV3                                                   |
+ | API Title   | SendOTPv2                                                   |
  |-------------|-------------------------------------------------------------|
  | URL	       |  https://server.qik.ai/app/functions/SendOTPV3              |
  | Method      | Post                                                        |
  | URL Params  | --                                                          |
- | Body Params | packageName, phone or phone, appId, UserId                  |
+ | Body Params | phone, packageName or appId, UserId                         |
  | Version     | 1.0                                                         |
 
 
@@ -120,25 +128,38 @@ You OTP is:1234 shZVjoAQhN2
   How to use
   
 •	Provide input parameter and you will get otp with saved hashcode of that package
-        here appid is current app's and userId is the user present in extended class to get 
-	tenantId
 
-•	Example valid input request is as follows 
+•	Example valid input request is as follows for app side 
 
-      {"packageName ":"test", "phone ":"9876543210",     }
-      or
-       {"appId":{w_appinfo pointer}}, "phone ":"9876543210", UserId:{user pointer}    }
+      {"packageName ":"test", "phone ":"9876543210" }
+      
+•	Example valid input request is as follows for app side 
+
+     { "phone":"98816789382",
+    "appId":{ "__type": "Pointer", "className": "w_appinfo", "objectId": "objid" },
+    "UserId":{ "__type": "Pointer", "className": "_User", "objectId": "objid" }}
 
 
 Result:-
 
 1. In return of this function the otp will be return 
 
-1234
+{
+    "result": 4256
+}
 
 2. This message will be received on given phone number 
 
-     You OTP is:1234 abc
+      for appsite
+
+     <#> You OTP is:1234 abc -QikEln
+     
+     
+      for frontend
+
+     <#> You OTP is:1234 -QikEln
+     
+
 
 
 
@@ -179,12 +200,12 @@ Result:-
       { "receiver":"9876543210",  
         "message":"abcd" ,
 	"templateId": "xyz", 
-	"TenantId":{TenantId pointer}}
+	"TenantId":{ "__type": "Pointer", "className": "partners_Tenant", "objectId": TenantId }}
 	OR
 	{ "receiver":"9876543210",  
         "message":"abcd" ,
 	"templateId": "xyz", 
-	"CreatedBy":{CreatedBy pointer},
+	"CreatedBy":{ "__type": "Pointer", "className": "_User", "objectId": id},
 	"extendedClass":"extendedClass"}
 
 
@@ -243,14 +264,14 @@ Abcd
         "Emailbody":"abcd" ,
 	"user": "xyz",
 	"pass":"pass",
-	"TenantId":{TenantId pointer}}
+	"TenantId":{ "__type": "Pointer", "className": "partners_Tenant", "objectId": TenantId }}
 	OR
 	{ "Emails":"EmailID",
         "Subject":"Subject",
         "Emailbody":"abcd" ,
 	"user": "xyz",
 	"pass":"pass",
-	"CreatedBy":{CreatedBy pointer},
+	"CreatedBy":{ "__type": "Pointer", "className": "_User", "objectId": id },
 	"extendedClass":"extendedClass"}
 
 
@@ -280,9 +301,9 @@ Abcd
 
 
 
-       5.Authentication
+       5.Authentication(unsecure)
 
-•It is Post function is for app site Authentication
+•It is Post function is for app site Authentication or login 
 
   
  | API Title   | Authentication                                              |
@@ -340,7 +361,8 @@ Result:-
 
      6.	 createMeeting
 
-•	It is Post function is for creating video meeting/online meeting
+•	It is Post function is for creating video meeting/online meeting it's created
+        using big blue buttton apis
 
   
  | API Title   | createMeeting                                               |
@@ -485,7 +507,7 @@ Result:-
 
     9.	Auth
 
-•	It is Post function is for Authentication
+•	It is Post function is for Authentication or login in frantend
   
  | API Title   | Auth                                                        |
  |-------------|-------------------------------------------------------------|
@@ -553,7 +575,7 @@ Introduction
  | URL	       | https://server.qik.ai/app/functions/APPActivation            |
  | Method      | Post                                                         |
  | URL Params  | --                                                           |
- | Body Params | AppId,UserId,IsActive,AdminEmail(optional)                   |
+ | Body Params | AppId,UserId,AdminEmail(optional)                   |
  | Version     | 1.0                                                          |
 
 
@@ -571,8 +593,8 @@ Introduction
 
       {
        "AppId":{ "__type": "Pointer", "className": "w_appinfo", "objectId": "9iLy7VWpmp" },
-       "UserId":{ "__type": "Pointer", "className": "_User", "objectId": "apusKvAbBQ" },
-       "IsActive":true}
+       "UserId":{ "__type": "Pointer", "className": "_User", "objectId": "apusKvAbBQ" }
+       }
 
 .    
 
@@ -649,58 +671,4 @@ Introduction
 
 
 
-     12.SendOTPV3
-
-•	It is Post function for getting otp in response,it can be used on app side or frontend
-
-•	It need some extra input parameter to calculate the number of sms  
  
- | API Title   | SendOTPv2                                                   |
- |-------------|-------------------------------------------------------------|
- | URL	       |  https://server.qik.ai/app/functions/SendOTPV3              |
- | Method      | Post                                                        |
- | URL Params  | --                                                          |
- | Body Params | phone, packageName or appId, UserId                         |
- | Version     | 1.0                                                         |
-
-
- | Headers Key            | Headers Value            |
- |------------------------|--------------------------|
- | X-Parse-Application-Id | shbjmmhfcp               |
- | Content-Type           | application/json         |
-
- 
-  How to use
-  
-•	Provide input parameter and you will get otp with saved hashcode of that package
-
-•	Example valid input request is as follows for app side 
-
-      {"packageName ":"test", "phone ":"9876543210" }
-      
-•	Example valid input request is as follows for app side 
-
-     { "phone":"98816789382",
-    "appId":{ "__type": "Pointer", "className": "w_appinfo", "objectId": "objid" },
-    "UserId":{ "__type": "Pointer", "className": "_User", "objectId": "objid" }}
-
-
-Result:-
-
-1. In return of this function the otp will be return 
-
-{
-    "result": 4256
-}
-
-2. This message will be received on given phone number 
-
-      for appsite
-
-     <#> You OTP is:1234 abc -QikEln
-     
-     
-      for frontend
-
-     <#> You OTP is:1234 -QikEln
-     

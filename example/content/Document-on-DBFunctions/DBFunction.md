@@ -1,17 +1,17 @@
      Document on DBFunctions working
      
-•	Dbfunctions or custom function we write in code editor of elearing app or in other code editor of apps of appcreator are saved In w_DBFunctions class
+•	Dbfunctions or custom function we write in code editor of appcreator are saved In w_DBFunctions class
 
 •	The code of functions is saved in encrypted(base64) format in the class with classname, conditions, eventTrigger and appid 
 
 •	This functions are deployed through vm by deployFunction and all function are deployed by
-Calling from DBFunction 
+     Calling from DBFunction 
 
-
-
+•	The logs generated through vm is saved in w_DBFunctionsLogs class by current function objectId and can be access through live query using on the w_DBFunctionsLogs 
+     
     1.	DBFunction
 
-•	It’s a Post function calling and running function saved in database through vm 
+•	It’s a Post function calling and running functions saved in w_DBFunctions class through vm at time of restart or build
  
 
  | API Title   | DBFunction                                                  |
@@ -56,32 +56,12 @@ Calling from DBFunction
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     2.	deployFunction
 
-•	It is Post function for getting otp in response 
+•	It's Post function for deploying custom function we write in code editor of appcreator 
+     the custom function is called using provided objectId from w_DBFunctions class and runs the functions through vm
+
+•	The logs generated through vm is saved in w_DBFunctionsLogs class by current function objectId and can be access through live query using on the w_DBFunctionsLogs 
 
  
  | API Title   | deployFunction                                              |
@@ -104,7 +84,7 @@ Calling from DBFunction
   
 •	Provide input parameter objectId of function saved in w_DBFunctions class in parse database
 
-•	Then the function will be run through vm then 
+•	Then the function will be run through vm then custom function can be used sepretly 
 
 
     Result:-

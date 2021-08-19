@@ -107,7 +107,7 @@
      3. DeployDBFunToProd
      
      
-•	It's Post function to restart all dynos of server if there is only one dyno then it will restart the pm2 rocess
+•	It's Post function to restart all dynos of server if there is only one dyno then it will restart the pm2 process
 
  
  | API Title   | DeployDBFunToProd                                           |

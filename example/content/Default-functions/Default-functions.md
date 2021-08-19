@@ -85,11 +85,11 @@ You OTP is:1234 shZVjoAQhN2
 
 Result:-
 
-1. In return of this function the otp will be return 
+ 1. In return of this function the otp will be return 
 
-1234
+   1234
 
-2. This message will be received on given phone number 
+ 2. This message will be received on given phone number 
 
      You OTP is:1234 abc
 
@@ -214,11 +214,11 @@ Result:-
 
 1. In return of this function the success will be return 
 
-{"result":"success"}
+  {"result":"success"}
 
 2. The message will be received on given phone number 
 
-Abcd
+   Abcd
 
 
 
@@ -280,11 +280,11 @@ Result:-
 
 1. In return of this function the success will be return 
 
-{"result":"success"}
+ {"result":"success"}
 
 2. The mail will be received on given Email Id
 
-Abcd
+ Abcd
 
 
 
@@ -601,10 +601,11 @@ Introduction
 
     Result:-
  
- {"result":"success"}
+    {"result":"success"}
  
  
 .
+
 
 
     12.	getdistinct

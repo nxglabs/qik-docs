@@ -5,7 +5,8 @@
 •	The attendence is marked by biometric machine and uploaded attendance by API in Biometrics_MachineConfig class
          for that we need to add domain in biometric machine e.g. server.qik.ai
          
-•	In Biometrics_MachineConfig class we need to add configration details as given below.
+•	To get the timestamp marked in desired class we need to add configration details in Biometrics_MachineConfig class 
+         as given below.
 
 
 

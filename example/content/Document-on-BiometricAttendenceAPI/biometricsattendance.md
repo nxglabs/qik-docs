@@ -7,8 +7,9 @@
          
 •	In Biometrics_MachineConfig class we need to add configration details as given below.
 
-.
-        1)Targetclass        :- the class of the application where biometric attendance will be saved
+
+
+         1)Targetclass        :- the class of the application where biometric attendance will be saved
 .         
          2)TimeStampField     :- the field of target class where the timestamp need to be added 
 .         

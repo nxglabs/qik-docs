@@ -12,7 +12,7 @@
     "commander": "3.0.2",
     "cookie-parser": "1.4.4",
     "debug": "4.1.1",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "express-session": "1.16.2",
     "extend": "3.0.2",
     "fitvids": "2.0.0",
